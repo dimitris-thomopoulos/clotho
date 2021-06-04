@@ -3,8 +3,8 @@ module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
 
-    //anything included directly inside 'theme' and outside of 'extend', will overwrite the default setting.
-    //'spacing' changes default values for all spacing properties: margin, padding, width, height, top, right, etc.
+    // anything included directly inside 'theme' and outside of 'extend', will overwrite the default setting.
+    // 'spacing' changes default values for all spacing properties: margin, padding, width, height, top, right, etc.
     
     spacing: {
       'auto': 'auto',
@@ -174,7 +174,7 @@ module.exports = {
     },
 
     screens: {
-      'xs': '321px',
+      'xs': '320px',
       'sm': '640px',
       'md': '960px',
       'lg': '1280px',
@@ -228,10 +228,6 @@ module.exports = {
       'auto': 'auto',
     },
 
-    boxShadow: {
-      DEFAULT: '0 0 40px rgba(0, 0, 0, 0.25);',
-      sm: '-40px 0 40px rgb(0 0 0 / 25%)',
-    },
 
     maxWidth: {
       'auto': 'auto',
@@ -596,13 +592,11 @@ module.exports = {
     }),
 
     fontFamily: {
-      'ProximaNova': ['ProximaNova'],
-      'SourceSansPro': ['SourceSansPro'],
+      
     },
 
     fill: theme => ({
-      'red': theme('#BF0A30'),
-      'blue': theme('#002868'),
+      
     }),
 
     extend: {     //anything included in 'extend' will be added as new styles without overwriting the default ones.
@@ -621,11 +615,10 @@ module.exports = {
         'grey': '#EEEEEE',
       },
 
-      backgroundImage: theme => ({                 //How To Use: bg-{key}
+      backgroundImage: theme => ({                  //How To Use: bg-{key}
         'mobile': "url('./images/bg-mobile.png')",  // bg-mobile
         'circle': "url('./images/circle.png')",     // bg-cirlce
         '2':      "url('./images/bg_2.png')",       // bg-2
-        'basic':  "url('./images/bg.png')",         // bg-basic (the main background for 321px+)
        }),
 
       backgroundSize: {
