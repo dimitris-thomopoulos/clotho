@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+input:-webkit-autofill,
+input:-webkit-autofill:hover, 
+input:-webkit-autofill:focus, 
+input:-webkit-autofill:active
+{
+ -webkit-box-shadow: 0 0 0 30px white inset !important;
+}
+
+*,
+::before,
+::after {
+  box-sizing: content-box; /* 1 */
+  border-width: 0; /* 2 */
+  border-style: solid; /* 2 */
+  border-color: #d1d5db; /* 2 */
+}
+
+body { 
+    margin: 0;
+    font-family: 'SourceSansPro', serif;
+    display: flex;
+    flex-direction: column;
+}
+
+h1,h2,h3,h4,h5,h6 {
+    line-height: normal;
+}
+
+button, input, a, textarea {
+    outline:none;    
+}
