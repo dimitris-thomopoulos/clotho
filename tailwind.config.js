@@ -206,7 +206,8 @@ module.exports = {
     },
 
     letterSpacing: {
-      tight: '-0.15px',
+      title: '13.5%',
+      sectiontitle: '8.5%',
       normal: '0',
       wide: '2px',
       wider: '0.2em',
@@ -228,6 +229,10 @@ module.exports = {
       'auto': 'auto',
     },
 
+    boxShadow: {
+      DEFAULT: '0 0 40px rgba(0, 0, 0, 0.25);',
+      product: '0px 4px 18px 3px rgba(0, 0, 0, 0.27);',
+    },
 
     maxWidth: {
       'auto': 'auto',
@@ -587,32 +592,45 @@ module.exports = {
     borderColor: theme => ({
       ...theme('colors'),
        DEFAULT: theme('colors.gray.300', 'currentColor'),
-       'red': '#AB0427',
-       'blue': '#002868',
+       'white': '#FFFFFF',
+       'black': '#000000',
+       'grey': '#1F1F1F',
     }),
-
+    
     fontFamily: {
-      
+      'MohaveRegular': ['MohaveRegular'],
+      'TwCenMT': ['TwCenMT'],
     },
 
     fill: theme => ({
-      
+      'white': theme('#FFFFFF'),
+      'black': theme('#000000'),
+      'navyblue': theme('#3a589b'),
+      'skyblue': theme('#1da1f2'),
     }),
-
+    
     extend: {     //anything included in 'extend' will be added as new styles without overwriting the default ones.
       textColor: {
-        'red': '#BF0A30',
-        'blue': '#002868',
-        'danger': '#e3342f',
+        'danger': '#FF0000',
+        'white-coat': '#864A39',
+        'solitaire-offshoulder': '#7B351E',
+        'dark-grey-coat': '#1F1918',
+        'blue-jacket': '#00485E',
+        'blue-jean-jacket': '#00485E',
+        'ivory-dress': '#594641',
+        'orange-sweatshirt': '#734900',
+        'dark-blue-coat': '#1C2034',
+        'white-pink-offshoulder': '#7D524B',
+        'exotic-highneck': '#A02721',
+        'mustard-tshirt': '#896000',
+        'pink-dress': '#685053',
       },
       
+
       colors: {
-        'main-red': '#BF0A30',
-        'secondary-red': '#A5082A',
-        'main-blue': '#002868',
-        'lightgrey': '#F8F8F8',
-        'darkgrey': '#B6B6B6',
-        'grey': '#EEEEEE',
+        'white': '#FFFFFF',
+        'black': '#000000', 
+        'grey': '#1F1F1F',
       },
 
       backgroundImage: theme => ({                  //How To Use: bg-{key}
