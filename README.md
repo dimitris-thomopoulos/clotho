@@ -1,2 +1,2 @@
-# clotho
-CLOTHO - A Fashion Store Project
+#CLOTHO
+A Fashion Store Project.
