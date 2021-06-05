@@ -94,6 +94,7 @@ module.exports = {
       '385': '385px',
       '400': '400px',
       '413': '413px',
+      '414': '414px',
       '420': '420px',
       '450': '450px',
       '457': '457px',
@@ -122,6 +123,7 @@ module.exports = {
       '750': '750px',
       '800': '800px',
       '850': '850px',
+      '896': '896px',
       '900': '900px',
       '950': '950px',
       '960': '960px',
@@ -478,6 +480,7 @@ module.exports = {
       '400': '400px',
       '480.5': '480.5px',
       '413': '413px',
+      '414': '414px',
       '420': '420px',
       '450': '450px',
       '457': '457px',
@@ -506,6 +509,7 @@ module.exports = {
       '750': '750px',
       '800': '800px',
       '850': '850px',
+      '896': '896px',
       '900': '900px',
       '950': '950px',
       '960': '960px',
@@ -634,9 +638,15 @@ module.exports = {
       },
 
       backgroundImage: theme => ({                  //How To Use: bg-{key}
-        'mobile': "url('./images/bg-mobile.png')",  // bg-mobile
-        'circle': "url('./images/circle.png')",     // bg-cirlce
-        '2':      "url('./images/bg_2.png')",       // bg-2
+        'main1': "url('./images/main1.jpg')", 
+        'main2': "url('./images/main2.jpg')",     
+        'main3': "url('./images/main3.jpg')",  
+        'main4': "url('./images/main4.jpg')",  
+        'main5': "url('./images/main5.jpg')",  
+        'fall-season-man': "url('./images/fall-season-man.jpg')",     
+        'clotho-pattern-mobile': "url('./images/clotho-pattern-bg-mobile.png')",     
+        'clotho-pattern-desktop': "url('./images/clotho-pattern-bg.png')",     
+        'footer-image': "url('./images/footer-bg.jpg')",     
        }),
 
       backgroundSize: {
