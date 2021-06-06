@@ -40,7 +40,7 @@ input:-webkit-autofill:active
 
 body { 
     margin: 0;
-    font-family: 'TwCenMT', serif;
+    font-family: TwCenMT, sans-serif;
     display: flex;
     flex-direction: column;
 }
@@ -120,6 +120,7 @@ img:not([src]):not([srcset]) {
 
 // Manual slide navigation:
 
+
 #radio1:checked ~ .first {
   margin-left: 0;
 }
@@ -145,7 +146,7 @@ img:not([src]):not([srcset]) {
 // Active indices background color change:
 
 #radio1:checked ~ .navigation-auto .auto-btn1 {
-  background: white;
+  /* background: white; */
   transition: all 0.5s ease-in-out;
 }
 
