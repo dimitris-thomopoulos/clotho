@@ -8,8 +8,65 @@
     <link rel="stylesheet" href="./public/build/tailwind.css">
 </head>
 <body class="flex flex-col">
+    
     <header class="main-bg relative w-420 h-900 flex flex-col items-center bg-cover bg-no-repeat bg-center">
+
+        <div class="slider w-420 h-900 overflow-hidden">
+            
+            <div class="slides w-500/100 h-900 flex">
+                <input type="radio" name="radio-btn" id="radio1" class="hidden">
+                <input type="radio" name="radio-btn" id="radio2" class="hidden">
+                <input type="radio" name="radio-btn" id="radio3" class="hidden">
+                <input type="radio" name="radio-btn" id="radio4" class="hidden">
+                <input type="radio" name="radio-btn" id="radio5" class="hidden">
+            
+
+                <div class="slide first w-20/100 transition-all duration-1000 bg-main1-sm bg=cover bg-no-repeat bg-center">
+                    <!-- <img src="public/build/images/main1-sm.jpg" class="w-420 h-900 object-cover bg-no-repeat " alt="first-slide"> -->
+                </div>
+
+                <div class="slide second w-20/100 transition-all duration-1000 bg-main2-sm bg=cover bg-no-repeat bg-center">
+                    <!-- <img src="public/build/images/main2-sm.jpg" class="w-420 h-900 object-cover bg-no-repeat " alt="second-slide"> -->
+                </div>
+
+                <div class="slide third w-20/100 transition-all duration-1000 bg-main3-sm bg=cover bg-no-repeat bg-center">
+                    <!-- <img src="public/build/images/main3-sm.jpg" class="w-420 h-900 object-cover bg-no-repeat " alt="third-slide"> -->
+                </div>
+
+                <div class="slide fourth w-20/100 transition-all duration-1000 bg-main4-sm bg=cover bg-no-repeat bg-center">
+                    <!-- <img src="public/build/images/main4-sm.jpg" class="w-420 h-900 object-cover bg-no-repeat " alt="fourth-slide"> -->
+                </div>
+
+                <div class="slide fifth w-20/100 transition-all duration-1000 bg-main5-sm bg=cover bg-no-repeat bg-center">
+                    <!-- <img src="public/build/images/main5-sm.jpg" class="w-420 h-900 object-cover bg-no-repeat " alt="fifth-slide"> -->
+                </div>
+
+
+                <div class="navigation-auto absolute w-420 bottom-22 flex justify-center">
+                    <div class="auto-btn1 w-40 h-5 mr-20 bg-inactive-indice cursor-pointer"></div>
+                    <div class="auto-btn2 w-40 h-5 mr-20 bg-inactive-indice cursor-pointer"></div>
+                    <div class="auto-btn3 w-40 h-5 mr-20 bg-inactive-indice cursor-pointer"></div>
+                    <div class="auto-btn4 w-40 h-5 mr-20 bg-inactive-indice cursor-pointer"></div>
+                    <div class="auto-btn5 w-40 h-5 bg-inactive-indice cursor-pointer"></div>
+                </div>
+
+            </div>
+
+            <div class="navigation-manual absolute w-420 -mt-27 flex justify-center">
+                <label for="radio1" class="manual-btn w-40 h-5 hover:bg-hover-indice duration-300 ease-in-out cursor-pointer mr-20"></label>
+                <label for="radio2" class="manual-btn w-40 h-5 hover:bg-hover-indice duration-300 ease-in-out cursor-pointer mr-20"></label>
+                <label for="radio3" class="manual-btn w-40 h-5 hover:bg-hover-indice duration-300 ease-in-out cursor-pointer mr-20"></label>
+                <label for="radio4" class="manual-btn w-40 h-5 hover:bg-hover-indice duration-300 ease-in-out cursor-pointer mr-20"></label>
+                <label for="radio5" class="manual-btn w-40 h-5 hover:bg-hover-indice duration-300 ease-in-out cursor-pointer"></label>
+            </div>
+
+        </div>
+
+
+
+
         <h1 class="text-71 text-white font-ModernNo tracking-title leading-76 absolute top-43/100">CLOTHO</h1>
+
         <div class="burger absolute top-0 right-0 w-115 h-93 flex justify-center items-center">
             <div class="burger-lines w-45 h-23 flex flex-col justify-between">
                 <span class="w-45 h-3 bg-white"></span>
@@ -21,7 +78,35 @@
         <img class="lazy" alt="A lazy image test" data-src="./images/main2.jpg">
     </section>
 
+    <script type="text/javascript">
+        let counter = 1;
+        let isFirstChecked = document.getElementById('radio1').checked;
+        let isLastChecked = document.getElementById('radio5').checked;
+        isFirstChecked = true;
+        isLastChecked = false;
 
+        setInterval(function() {
+
+            for (let i=1; i<=5; i++) {
+                if (document.getElementById('radio' + i).checked) {
+                    counter = i+1;
+                    break;
+                }
+            }
+
+            if (counter <= 5) {
+                document.getElementById('radio' + counter).checked = true;
+                isFirstChecked = false;
+            }
+
+            else {
+                counter = 1;
+                document.getElementById('radio' + 1).checked = true;
+                isLastChecked = false;
+            }
+
+        }, 5000);
+    </script>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.2/dist/lazyload.min.js"></script>
 </body>
 </html>

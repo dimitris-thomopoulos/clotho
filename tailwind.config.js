@@ -207,6 +207,7 @@ module.exports = {
       '114.25': '114.25%',
       '130/100': '130%',
       '170/100': '170%',
+      '500/100': '500%',
     },
 
     screens: {
@@ -671,16 +672,23 @@ module.exports = {
         'white': '#FFFFFF',
         'black': '#000000', 
         'grey': '#1F1F1F',
-        'darken': 'rgba(0,0,0,0.25)'
+        'darken': 'rgba(0,0,0,0.25)',
+        'inactive-indice': '#5A5A5A',
+        'hover-indice': '#9D9D9D',
       },
 
       backgroundImage: theme => ({                  //How To Use: bg-{key}
         'main1': "url('./images/main1.jpg')", 
-        'main1-sm': "url('./images/main1-sm.jpg')", 
+        'main2': "url('./images/main2.jpg')",     
         'main2': "url('./images/main2.jpg')",     
         'main3': "url('./images/main3.jpg')",  
         'main4': "url('./images/main4.jpg')",  
         'main5': "url('./images/main5.jpg')",  
+        'main1-sm': "url('./images/main1-sm.jpg')", 
+        'main2-sm': "url('./images/main2-sm.jpg')", 
+        'main3-sm': "url('./images/main3-sm.jpg')", 
+        'main4-sm': "url('./images/main4-sm.jpg')", 
+        'main5-sm': "url('./images/main5-sm.jpg')", 
         'fall-season-man': "url('./images/fall-season-man.jpg')",     
         'clotho-pattern-mobile': "url('./images/clotho-pattern-bg-mobile.png')",     
         'clotho-pattern-desktop': "url('./images/clotho-pattern-bg.png')",     
@@ -693,6 +701,10 @@ module.exports = {
 
       transitionProperty: {
         'transform': 'transform',
+      },
+
+      transitionDuration: {
+        '2000': '2000ms',
       },
 
       lineHeight: {
