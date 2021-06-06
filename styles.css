@@ -53,6 +53,13 @@ button, input, a, textarea {
     outline:none;    
 }
 
+button:focus {
+  outline: 0;
+}
+input[type="button"]::-moz-focus-inner {
+  border: 0;
+}
+
 img:not([src]):not([srcset]) {
     visibility: hidden;
   }

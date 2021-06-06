@@ -51,6 +51,7 @@ module.exports = {
       '39': '39px',
       '40': '40px',
       '41': '41px',
+      '41.5': '41.5px',
       '42': '42px',
       '43': '43px',
       '44': '44px',
@@ -675,6 +676,7 @@ module.exports = {
         'darken': 'rgba(0,0,0,0.25)',
         'inactive-indice': '#5A5A5A',
         'hover-indice': '#9D9D9D',
+        'header-btn-bg': 'rgba(0,0,0,0.35)',
       },
 
       backgroundImage: theme => ({                  //How To Use: bg-{key}
