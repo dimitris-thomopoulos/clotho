@@ -21,6 +21,11 @@
   font-weight: normal;
 }
 
+html {
+  -ms-touch-action: manipulation;
+      touch-action: manipulation;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
