@@ -13,29 +13,30 @@ const headerButton = document.querySelector('#header-btn');
 const clothoTitle = document.querySelector('header h1');
 const manualIndices = document.querySelector('.navigation-manual');
 const autoIndices = document.querySelector('.navigation-auto');
+const sliderDarken = document.querySelector('.sliderDarken');
+
+
 
 burgerButton.addEventListener('click', () => {
-    
-    topLine.style.transform = 'translateX(15px) rotate(45deg)';
-    topLineWhite.style.width = '62px';
-    topLineTransp.style.width = '28px';
 
-    topLine.style.transition = 'all 0.3s ease-in-out';
-    topLineWhite.style.transition = 'all 0.3s ease-in-out';
-    topLineTransp.style.transition = 'all 0.3s ease-in-out';
-    
+    topLine.classList.toggle('menu-active');
+    topLineWhite.classList.toggle('menu-active');
+    topLineTransp.classList.toggle('menu-active');
 
+    bottomLine.classList.toggle('menu-active');
+    bottomLineWhite.classList.toggle('menu-active');
+    bottomLineTransp.classList.toggle('menu-active');
 
-    bottomLine.style.transform = 'translateX(15px) rotate(-45deg)';
-    bottomLineWhite.style.width = '62px';
-    bottomLineTransp.style.width = '28px';
-    
-    bottomLine.style.transition = 'all 0.3s ease-in-out';
-    bottomLineWhite.style.transition = 'all 0.3s ease-in-out';
-    bottomLineTransp.style.transition = 'all 0.3s ease-in-out';
-
-    headerButton.style.display = 'none';
-    clothoTitle.style.display = 'none';
-    manualIndices.style.display = 'none';
-    autoIndices.style.display = 'none';
+    sliderDarken.classList.toggle('menu-active');
+    headerButton.classList.toggle('menu-active');
+    clothoTitle.classList.toggle('menu-active');
+    manualIndices.classList.toggle('menu-active');
+    autoIndices.classList.toggle('menu-active');
 })
+
+
+
+
+
+
+

@@ -145,27 +145,27 @@ img:not([src]):not([srcset]) {
 
 #radio1:checked ~ .navigation-auto .auto-btn1 {
   /* background: white; */
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 #radio2:checked ~ .navigation-auto .auto-btn2 {
   background: white;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 #radio3:checked ~ .navigation-auto .auto-btn3 {
   background: white;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 #radio4:checked ~ .navigation-auto .auto-btn4 {
   background: white;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 #radio5:checked ~ .navigation-auto .auto-btn5 {
   background: white;
-  transition: all 0.5s ease-in-out;
+  transition: all 1s ease-in-out;
 }
 
 
@@ -174,4 +174,72 @@ img:not([src]):not([srcset]) {
 h1 {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   user-select: none;
+}
+
+
+
+// Mobile dropdown menu changes (class toggle):
+
+
+.topLine span:nth-of-type(1).menu-active {
+  width: 28px;
+  transition: width 0.2s ease-in-out;
+}
+
+.topLine span:nth-of-type(2).menu-active {
+  width: 80px;
+  transition: width 0.2s ease-in-out;
+}
+
+.topLine.menu-active {
+  transform: translateX(15px) rotate(45deg);
+  transition: transform 0.2s ease-in-out;
+}
+
+
+
+.bottomLine.menu-active {
+  transform: translateX(15px) rotate(-45deg);
+  transition: transform 0.2s ease-in-out;
+}
+
+.bottomLine span:nth-of-type(1).menu-active {
+  width: 28px;
+  transition: width 0.2s ease-in-out;
+}
+
+.bottomLine span:nth-of-type(2).menu-active {
+  width: 60px;
+  transition: width 0.2s ease-in-out;
+}
+
+
+.sliderDarken.menu-active {
+  background: rgba(0,0,0,0.45);
+  z-index: 0;
+  opacity: 100%;
+  transition: all 0.2s ease-in-out;
+}
+
+#header-btn.menu-active {
+  z-index: -1;
+  opacity: 0%;
+  transition: opacity 0.2s ease-in-out;
+}
+
+header h1.menu-active {
+  opacity: 0%;
+  transition: all 0.2s ease-in-out;
+}
+
+.navigation-manual.menu-active {
+  z-index: 0;
+  opacity: 0%;
+  transition: all 0.2s ease-in-out;
+}
+
+.navigation-auto.menu-active {
+  z-index: 0;
+  opacity: 0%;
+  transition: all 0.2s ease-in-out;
 }
