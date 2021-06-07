@@ -215,31 +215,30 @@ h1 {
 
 
 .sliderDarken.menu-active {
+  z-index: 10;
+  opacity: 1;
   background: rgba(0,0,0,0.45);
-  z-index: 0;
-  opacity: 100%;
-  transition: all 0.2s ease-in-out;
+  transition: opacity background 0.2s ease-in-out;
 }
 
 #header-btn.menu-active {
-  z-index: -1;
-  opacity: 0%;
+  opacity: 0;
   transition: opacity 0.2s ease-in-out;
 }
 
 header h1.menu-active {
-  opacity: 0%;
+  opacity: 0;
   transition: all 0.2s ease-in-out;
 }
 
 .navigation-manual.menu-active {
   z-index: 0;
-  opacity: 0%;
+  opacity: 0;
   transition: all 0.2s ease-in-out;
 }
 
 .navigation-auto.menu-active {
   z-index: 0;
-  opacity: 0%;
+  opacity: 0;
   transition: all 0.2s ease-in-out;
 }
