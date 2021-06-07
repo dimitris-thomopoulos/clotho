@@ -26,6 +26,11 @@ html {
       touch-action: manipulation;
 }
 
+html, body {
+  max-width: 100%;
+  overflow-x: hidden;
+}
+
 input:-webkit-autofill,
 input:-webkit-autofill:hover, 
 input:-webkit-autofill:focus, 
