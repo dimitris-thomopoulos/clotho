@@ -54,7 +54,6 @@ input:-webkit-autofill:active
 
 body { 
     margin: 0;
-    font-family: TwCenMT, sans-serif;
     display: flex;
     flex-direction: column;
 }
@@ -128,7 +127,6 @@ img:not([src]):not([srcset]) {
 
 // Manual slide navigation:
 
-
 #radio1:checked ~ .first {
   margin-left: 0;
 }
@@ -181,15 +179,28 @@ img:not([src]):not([srcset]) {
 
 
 
+
+
+
+
+
 h1 {
   text-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
   user-select: none;
 }
 
 
+#header-btn:hover {
+  background: white;
+  color: black;
+  transition: opacity 0.2s ease-in-out, color 0.3s ease-in-out, background 0.3s ease-in-out;
+}
 
-// Mobile dropdown menu changes (class toggle):
 
+
+
+
+// Mobile dropdown menu changes (menu-active class toggle):
 
 .topLine span:nth-of-type(1).menu-active {
   width: 28px;
