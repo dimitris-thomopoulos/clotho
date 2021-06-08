@@ -1,9 +1,3 @@
-if ('addEventListener' in document) {
-    document.addEventListener('DOMContentLoaded', function() {
-        FastClick.attach(document.body);
-    }, false);
-}
-
 const burgerButton = document.querySelector('.burger');
 
 const topLine = document.querySelector('.topLine');
