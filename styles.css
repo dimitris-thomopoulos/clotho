@@ -26,6 +26,10 @@ html {
       touch-action: manipulation;
 }
 
+* {
+  font-family: 'TwCenMT', sans-serif;
+}
+
 html, body {
   max-width: 100%;
   overflow-x: hidden;
