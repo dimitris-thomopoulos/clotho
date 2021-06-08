@@ -643,7 +643,7 @@ module.exports = {
     fontFamily: {
       'ModernNo': ['ModernNo'],
       'MohaveRegular': ['MohaveRegular'],
-      sans: ['TwCenMT', 'sans-serif'],
+      'sans': ['"Tw Cen MT"', 'sans-serif'],
     },
 
     fill: theme => ({
