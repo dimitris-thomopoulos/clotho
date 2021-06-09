@@ -15,7 +15,8 @@ const manualIndices = document.querySelector('.navigation-manual');
 const autoIndices = document.querySelector('.navigation-auto');
 const sliderDarken = document.querySelector('.sliderDarken');
 
-
+const arrowScrollMobile = document.querySelector('.arrow-scroll-sm');
+// const arrowScrollDesktop = document.querySelector('.arrow-scroll-lg');
 
 burgerButton.addEventListener('click', () => {
 
@@ -32,7 +33,12 @@ burgerButton.addEventListener('click', () => {
     clothoTitle.classList.toggle('menu-active');
     manualIndices.classList.toggle('menu-active');
     autoIndices.classList.toggle('menu-active');
+    arrowScrollMobile.classList.toggle('menu-active');
 })
+
+
+
+
 
 
 
@@ -52,13 +58,27 @@ burgerButton.addEventListener('click', () => {
 
 // Scroll down arrow animation
 
-// Define mobile & desktop arrows:
+// default setting (when the page loads for the first time):
 
-const arrowScrollMobile = document.querySelector('.arrow-scroll-sm');
-// const arrowScrollDesktop = document.querySelector('.arrow-scroll-lg');
+if (screen.width <= 420) {
+
+    window.mobileArrow = setInterval ( () => {
+        arrowScrollMobile.style.transform = 'translateY(10px)';
+        arrowScrollMobile.style.transition = 'transform 1s ease-in-out';
+    
+        setTimeout ( () => {
+            arrowScrollMobile.style.transform = 'translateY(-10px)';
+            arrowScrollMobile.style.transition = 'transform 1s ease-in-out';
+        
+        }, 1000);
+    
+    
+    }, 2000);
+}
 
 
-// Add width match event listener:
+
+// Event listener that toggles the interval whenever the screen resizes to more than 420px:
 
 let widthMatch = window.matchMedia("(max-width: 420px)");
 
@@ -70,11 +90,11 @@ widthMatch.addEventListener('change', function(mm) {
         
         window.mobileArrow = setInterval ( () => {
                 arrowScrollMobile.style.transform = 'translateY(10px)';
-                arrowScrollMobile.style.transition = 'all 1s ease-in-out';
+                arrowScrollMobile.style.transition = 'transform 1s ease-in-out';
             
                 setTimeout ( () => {
                     arrowScrollMobile.style.transform = 'translateY(-10px)';
-                    arrowScrollMobile.style.transition = 'all 1s ease-in-out';
+                    arrowScrollMobile.style.transition = 'transform 1s ease-in-out';
                 
                 }, 1000);
 
@@ -85,7 +105,6 @@ widthMatch.addEventListener('change', function(mm) {
     else {
 
         // it no longer matches the media query
-
         // clears the previous interval which is now useless (because the arrow for mobile will now be hidden):
         clearInterval(mobileArrow);
 
