@@ -1,3 +1,8 @@
+// MOBILE HEADER:
+
+
+// Dropdown Menu for mobile:
+
 const burgerButton = document.querySelector('.burger');
 
 const topLine = document.querySelector('.topLine');
@@ -18,8 +23,11 @@ const sliderDarken = document.querySelector('.sliderDarken');
 const arrowScrollMobile = document.querySelector('.arrow-scroll-sm');
 // const arrowScrollDesktop = document.querySelector('.arrow-scroll-lg');
 
+let isDropdownOpened = false;
+
 burgerButton.addEventListener('click', () => {
 
+    // Animate the 'X' button:
     topLine.classList.toggle('menu-active');
     topLineWhite.classList.toggle('menu-active');
     topLineTransp.classList.toggle('menu-active');
@@ -28,12 +36,18 @@ burgerButton.addEventListener('click', () => {
     bottomLineWhite.classList.toggle('menu-active');
     bottomLineTransp.classList.toggle('menu-active');
 
+    // Show the actual dropdown menu:
     sliderDarken.classList.toggle('menu-active');
+
+
+    // Hide the elements of the header in the background:
     headerButton.classList.toggle('menu-active');
     clothoTitle.classList.toggle('menu-active');
     manualIndices.classList.toggle('menu-active');
     autoIndices.classList.toggle('menu-active');
     arrowScrollMobile.classList.toggle('menu-active');
+
+    isDropdownOpened = !(isDropdownOpened);     
 })
 
 
@@ -42,11 +56,79 @@ burgerButton.addEventListener('click', () => {
 
 
 
+// Dropdown Menu Extend for mobile:
+
+const manDropdown = document.querySelector('#dropdown-mobile li:nth-of-type(1) a');
+const womanDropdown = document.querySelector('#dropdown-mobile li:nth-of-type(2) a');
+const accessoriesDropdown = document.querySelector('#dropdown-mobile li:nth-of-type(3) a');
+
+const areaOutsideMan = document.querySelectorAll('header li:not(.li-man), .burger')
+const areaOutsideWoman = document.querySelectorAll('header li:not(.li-woman), .burger')
+const areaOutsideAccessories = document.querySelectorAll('header li:not(.li-accessories), .burger')
+
+
+let isManOpened = false;
+let isWomanOpened = false;
+let isAccessoriesOpened = false;
 
 
 
 
+// 'MAN' Category dropdown toggle:
 
+manDropdown.addEventListener('click', () => {
+    manDropdown.classList.toggle('border-white');
+    isManOpened = !(isManOpened);    
+})
+
+for (let i=0, len=areaOutsideMan.length; i<len; i++) {
+    areaOutsideMan[i].addEventListener('click', () => {
+        if (isManOpened) {
+            manDropdown.classList.toggle('border-white');
+            manDropdown.style.transition = 'border-color 0.2s ease-in-out';
+            isManOpened = false;
+        }
+    })
+}
+
+
+
+
+// 'WOMAN' Category dropdown toggle:
+
+womanDropdown.addEventListener('click', () => {
+    womanDropdown.classList.toggle('border-white');
+    isWomanOpened = !(isWomanOpened);    
+})
+
+for (let i=0, len=areaOutsideWoman.length; i<len; i++) {
+    areaOutsideWoman[i].addEventListener('click', () => {
+        if (isWomanOpened) {
+            womanDropdown.classList.toggle('border-white');
+            womanDropdown.style.transition = 'border-color 0.2s ease-in-out';
+            isWomanOpened = false;
+        }
+    })
+}
+
+
+
+// 'ACCESSORIES' Category dropdown toggle:
+
+accessoriesDropdown.addEventListener('click', () => {
+    accessoriesDropdown.classList.toggle('border-white');
+    isAccessoriesOpened = !(isAccessoriesOpened);    
+})
+
+for (let i=0, len=areaOutsideAccessories.length; i<len; i++) {
+    areaOutsideAccessories[i].addEventListener('click', () => {
+        if (isAccessoriesOpened) {
+            accessoriesDropdown.classList.toggle('border-white');
+            accessoriesDropdown.style.transition = 'border-color 0.2s ease-in-out';
+            isAccessoriesOpened = false;
+        }
+    })
+}
 
 
 
@@ -127,4 +209,3 @@ widthMatch.addEventListener('change', function(mm) {
     }
 
 });
-
