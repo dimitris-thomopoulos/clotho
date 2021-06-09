@@ -40,3 +40,72 @@ burgerButton.addEventListener('click', () => {
 
 
 
+
+
+
+
+
+
+
+
+
+
+// Scroll down arrow animation
+
+// Define mobile & desktop arrows:
+
+const arrowScrollMobile = document.querySelector('.arrow-scroll-sm');
+// const arrowScrollDesktop = document.querySelector('.arrow-scroll-lg');
+
+
+// Add width match event listener:
+
+let widthMatch = window.matchMedia("(max-width: 420px)");
+
+// mm in the function arg is the matchMedia object, passed back into the function
+
+widthMatch.addEventListener('change', function(mm) {
+    if (mm.matches) {
+        // it matches the media query: that is, min-width is <= 420px
+        
+        window.mobileArrow = setInterval ( () => {
+                arrowScrollMobile.style.transform = 'translateY(10px)';
+                arrowScrollMobile.style.transition = 'all 1s ease-in-out';
+            
+                setTimeout ( () => {
+                    arrowScrollMobile.style.transform = 'translateY(-10px)';
+                    arrowScrollMobile.style.transition = 'all 1s ease-in-out';
+                
+                }, 1000);
+
+            
+            }, 2000);
+    }
+
+    else {
+
+        // it no longer matches the media query
+
+        // clears the previous interval which is now useless (because the arrow for mobile will now be hidden):
+        clearInterval(mobileArrow);
+
+
+        // desktop (THE DESKTOP ARROW IS USED IN THE SEASON ARRIVALS INTRO PAGE, NOT THE HEADER)
+        // -TODO: Implement the animation for the new svg with the new stroke and text
+        
+        // setInterval ( () => {
+        //     arrowScrollDesktop.style.transform = 'translateY(10px)';
+        //     arrowScrollDesktop.style.transition = 'all 1s ease-in-out';
+        
+        //     setTimeout ( () => {
+        //         arrowScrollDesktop.style.transform = 'translateY(-10px)';
+        //         arrowScrollDesktop.style.transition = 'all 1s ease-in-out';
+        
+        //     }, 1000);
+            
+        
+        // }, 2000);
+    }
+
+});
+
