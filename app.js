@@ -47,6 +47,10 @@ burgerButton.addEventListener('click', () => {
     autoIndices.classList.toggle('menu-active');
     arrowScrollMobile.classList.toggle('menu-active');
 
+    // Hide the back-arrow SVG icon (if it was shown):
+    if (!(backArrow.classList.contains('w-0'))) backArrow.classList.add('w-0');
+
+    // Set the new bool state:
     isDropdownOpened = !(isDropdownOpened);     
 })
 
@@ -62,6 +66,9 @@ const manDropdown = document.querySelector('#dropdown-mobile li:nth-of-type(1) a
 const womanDropdown = document.querySelector('#dropdown-mobile li:nth-of-type(2) a');
 const accessoriesDropdown = document.querySelector('#dropdown-mobile li:nth-of-type(3) a');
 
+const extendMenus = [manDropdown, womanDropdown, accessoriesDropdown];
+const backArrow = document.querySelector('.back-arrow');
+
 const areaOutsideMan = document.querySelectorAll('header li:not(.li-man), .burger')
 const areaOutsideWoman = document.querySelectorAll('header li:not(.li-woman), .burger')
 const areaOutsideAccessories = document.querySelectorAll('header li:not(.li-accessories), .burger')
@@ -71,6 +78,39 @@ let isManOpened = false;
 let isWomanOpened = false;
 let isAccessoriesOpened = false;
 
+// Before adjusting the actions for every category selection, we first configure the back arrow icon:
+
+extendMenus.forEach((menu) => {                         // Display the back-arrow icon when a category is selected
+    menu.addEventListener('click', () => {
+        if(backArrow.classList.contains('w-0')) {
+            backArrow.classList.remove('w-0');
+        }
+    })
+})
+
+
+backArrow.addEventListener('click', () => {
+    
+    // Close the currently open category:
+    isManOpened = false;
+    isWomanOpened = false;
+    isAccessoriesOpened = false;
+    
+    // Remove the currently open category's white underline border:
+    extendMenus.forEach((menu) => {
+        menu.classList.remove('border-white');
+        if(!(menu.classList.contains('border-transparent'))) {
+            menu.classList.add('border-transparent');
+        }
+        
+    })
+
+    // Animate the disappearing of the arrow icon:
+    if (!(backArrow.classList.contains('w-0'))) {    
+        backArrow.classList.add('w-0');
+    }
+})
+
 
 
 
@@ -78,7 +118,8 @@ let isAccessoriesOpened = false;
 
 manDropdown.addEventListener('click', () => {
     manDropdown.classList.toggle('border-white');
-    isManOpened = !(isManOpened);    
+    isManOpened = !(isManOpened);
+
 })
 
 for (let i=0, len=areaOutsideMan.length; i<len; i++) {
@@ -98,7 +139,8 @@ for (let i=0, len=areaOutsideMan.length; i<len; i++) {
 
 womanDropdown.addEventListener('click', () => {
     womanDropdown.classList.toggle('border-white');
-    isWomanOpened = !(isWomanOpened);    
+    isWomanOpened = !(isWomanOpened);
+
 })
 
 for (let i=0, len=areaOutsideWoman.length; i<len; i++) {
@@ -117,7 +159,8 @@ for (let i=0, len=areaOutsideWoman.length; i<len; i++) {
 
 accessoriesDropdown.addEventListener('click', () => {
     accessoriesDropdown.classList.toggle('border-white');
-    isAccessoriesOpened = !(isAccessoriesOpened);    
+    isAccessoriesOpened = !(isAccessoriesOpened);
+
 })
 
 for (let i=0, len=areaOutsideAccessories.length; i<len; i++) {
