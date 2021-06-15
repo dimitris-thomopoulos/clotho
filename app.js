@@ -50,8 +50,87 @@ burgerButton.addEventListener('click', () => {
     // Hide the back-arrow SVG icon (if it was shown):
     if (!(backArrow.classList.contains('w-0'))) backArrow.classList.add('w-0');
 
+
+    // Remove the underline of the active category:
+    
+    manDropdown.classList.remove('border-white');
+    womanDropdown.classList.remove('border-white');
+    accessoriesDropdown.classList.remove('border-white');
+
+
+    // Close all dropdown extend menus:
+    if(isManOpened) {
+        Object.keys(notManLinks).forEach(key => {
+            notManLinks[key].classList.toggle('text-38');
+            
+            setTimeout(() => {
+                notManLinks[key].classList.toggle('absolute');
+            },200)
+        }) 
+        
+        Object.keys(manLinks).forEach(key => {
+            manLinks[key].classList.toggle('text-24');
+        })
+        
+        manLinks[0].classList.toggle('mb-10');
+        manLinks[1].classList.toggle('my-10');
+        manLinks[2].classList.toggle('my-10');
+        manLinks[3].classList.toggle('my-10');
+        manLinks[4].classList.toggle('my-10');
+        manLinks[5].classList.toggle('mt-10');
+        
+    } else if (isWomanOpened) {
+
+        Object.keys(notWomanLinks).forEach(key => {
+            notWomanLinks[key].classList.toggle('text-38');
+            
+            setTimeout(() => {
+                notWomanLinks[key].classList.toggle('absolute');
+            },200)
+        }) 
+        
+        Object.keys(womanLinks).forEach(key => {
+            womanLinks[key].classList.toggle('text-24');
+        })
+        
+        womanLinks[0].classList.toggle('mb-10');
+        womanLinks[1].classList.toggle('my-10');
+        womanLinks[2].classList.toggle('my-10');
+        womanLinks[3].classList.toggle('my-10');
+        womanLinks[4].classList.toggle('my-10');
+        womanLinks[5].classList.toggle('mt-10');
+
+    } else if (isAccessoriesOpened) {
+
+        Object.keys(notAccessoriesLinks).forEach(key => {
+            notAccessoriesLinks[key].classList.toggle('text-38');
+            
+            setTimeout(() => {
+                notAccessoriesLinks[key].classList.toggle('absolute');
+            },200)
+        }) 
+        
+        Object.keys(accessoriesLinks).forEach(key => {
+            accessoriesLinks[key].classList.toggle('text-24');
+        })
+        
+        accessoriesLinks[0].classList.toggle('mb-10');
+        accessoriesLinks[1].classList.toggle('my-10');
+        accessoriesLinks[2].classList.toggle('my-10');
+        accessoriesLinks[3].classList.toggle('my-10');
+        accessoriesLinks[4].classList.toggle('my-10');
+        accessoriesLinks[5].classList.toggle('mt-10');
+    }
+
+
+    
     // Set the new bool state:
     isDropdownOpened = !(isDropdownOpened);     
+    
+    // Close all dropdowns:
+    isManOpened = false;
+    isWomanOpened = false;
+    isAccessoriesOpened = false;
 })
 
 
@@ -62,17 +141,24 @@ burgerButton.addEventListener('click', () => {
 
 // Dropdown Menu Extend for mobile:
 
-const manDropdown = document.querySelector('#dropdown-mobile li:nth-of-type(1) a');
-const womanDropdown = document.querySelector('#dropdown-mobile li:nth-of-type(2) a');
-const accessoriesDropdown = document.querySelector('#dropdown-mobile li:nth-of-type(3) a');
+const manDropdown = document.querySelector('.li-man a');
+const womanDropdown = document.querySelector('.li-woman a');
+const accessoriesDropdown = document.querySelector('.li-accessories a');
 
 const extendMenus = [manDropdown, womanDropdown, accessoriesDropdown];
 const backArrow = document.querySelector('.back-arrow');
 
-const areaOutsideMan = document.querySelectorAll('header li:not(.li-man), .burger')
-const areaOutsideWoman = document.querySelectorAll('header li:not(.li-woman), .burger')
-const areaOutsideAccessories = document.querySelectorAll('header li:not(.li-accessories), .burger')
+const areaOutsideMan = document.querySelectorAll('header li:not(.li-man):not(.li-man-items), .burger');
+const areaOutsideWoman = document.querySelectorAll('header li:not(.li-woman):not(.li-woman-items), .burger');
+const areaOutsideAccessories = document.querySelectorAll('header li:not(.li-accessories):not(.li-accessories-items), .burger');
 
+const manLinks = document.querySelectorAll('.li-man-items');
+const womanLinks = document.querySelectorAll('.li-woman-items');
+const accessoriesLinks = document.querySelectorAll('.li-accessories-items');
+
+const notManLinks = document.querySelectorAll('header li:not(.li-man):not(.li-man-items):not(.li-woman-items):not(.li-accessories-items)');
+const notWomanLinks = document.querySelectorAll('header li:not(.li-woman):not(.li-man-items):not(.li-woman-items):not(.li-accessories-items)');
+const notAccessoriesLinks = document.querySelectorAll('header li:not(.li-accessories):not(.li-man-items):not(.li-woman-items):not(.li-accessories-items)');
 
 let isManOpened = false;
 let isWomanOpened = false;
@@ -90,12 +176,79 @@ extendMenus.forEach((menu) => {                         // Display the back-arro
 
 
 backArrow.addEventListener('click', () => {
-    
+        
+    // Close the current category's links:
+    if(isManOpened) {
+        Object.keys(notManLinks).forEach(key => {
+            notManLinks[key].classList.toggle('text-38');
+            
+            setTimeout(() => {
+                notManLinks[key].classList.toggle('absolute');
+            },150)
+        }) 
+        
+        Object.keys(manLinks).forEach(key => {
+            manLinks[key].classList.toggle('text-24');
+        })
+        
+        manLinks[0].classList.toggle('mb-10');
+        manLinks[1].classList.toggle('my-10');
+        manLinks[2].classList.toggle('my-10');
+        manLinks[3].classList.toggle('my-10');
+        manLinks[4].classList.toggle('my-10');
+        manLinks[5].classList.toggle('mt-10');
+        
+    } else if (isWomanOpened) {
+
+        Object.keys(notWomanLinks).forEach(key => {
+            notWomanLinks[key].classList.toggle('text-38');
+            
+            setTimeout(() => {
+                notWomanLinks[key].classList.toggle('absolute');
+            },150)
+        }) 
+        
+        Object.keys(womanLinks).forEach(key => {
+            womanLinks[key].classList.toggle('text-24');
+        })
+        
+        womanLinks[0].classList.toggle('mb-10');
+        womanLinks[1].classList.toggle('my-10');
+        womanLinks[2].classList.toggle('my-10');
+        womanLinks[3].classList.toggle('my-10');
+        womanLinks[4].classList.toggle('my-10');
+        womanLinks[5].classList.toggle('mt-10');
+
+    } else {
+
+        Object.keys(notAccessoriesLinks).forEach(key => {
+            notAccessoriesLinks[key].classList.toggle('text-38');
+            
+            setTimeout(() => {
+                notAccessoriesLinks[key].classList.toggle('absolute');
+            },150)
+        }) 
+        
+        Object.keys(accessoriesLinks).forEach(key => {
+            accessoriesLinks[key].classList.toggle('text-24');
+        })
+        
+        accessoriesLinks[0].classList.toggle('mb-10');
+        accessoriesLinks[1].classList.toggle('my-10');
+        accessoriesLinks[2].classList.toggle('my-10');
+        accessoriesLinks[3].classList.toggle('my-10');
+        accessoriesLinks[4].classList.toggle('my-10');
+        accessoriesLinks[5].classList.toggle('mt-10');
+    }
+
+
+
+
     // Close the currently open category:
     isManOpened = false;
     isWomanOpened = false;
     isAccessoriesOpened = false;
-    
+
     // Remove the currently open category's white underline border:
     extendMenus.forEach((menu) => {
         menu.classList.remove('border-white');
@@ -118,8 +271,27 @@ backArrow.addEventListener('click', () => {
 
 manDropdown.addEventListener('click', () => {
     manDropdown.classList.toggle('border-white');
-    isManOpened = !(isManOpened);
 
+    Object.keys(notManLinks).forEach(key => {
+        notManLinks[key].classList.toggle('text-38');
+
+        setTimeout(() => {
+            notManLinks[key].classList.toggle('absolute');
+        },200)
+    }) 
+
+    Object.keys(manLinks).forEach(key => {
+        manLinks[key].classList.toggle('text-24');
+    })
+
+    manLinks[0].classList.toggle('mb-10');
+    manLinks[1].classList.toggle('my-10');
+    manLinks[2].classList.toggle('my-10');
+    manLinks[3].classList.toggle('my-10');
+    manLinks[4].classList.toggle('my-10');
+    manLinks[5].classList.toggle('mt-10');
+
+    isManOpened = !(isManOpened);
 })
 
 for (let i=0, len=areaOutsideMan.length; i<len; i++) {
@@ -139,6 +311,26 @@ for (let i=0, len=areaOutsideMan.length; i<len; i++) {
 
 womanDropdown.addEventListener('click', () => {
     womanDropdown.classList.toggle('border-white');
+
+    Object.keys(notWomanLinks).forEach(key => {
+        notWomanLinks[key].classList.toggle('text-38');
+
+        setTimeout(() => {
+            notWomanLinks[key].classList.toggle('absolute');
+        },200)
+    }) 
+
+    Object.keys(womanLinks).forEach(key => {
+        womanLinks[key].classList.toggle('text-24');
+    })
+
+    womanLinks[0].classList.toggle('mb-10');
+    womanLinks[1].classList.toggle('my-10');
+    womanLinks[2].classList.toggle('my-10');
+    womanLinks[3].classList.toggle('my-10');
+    womanLinks[4].classList.toggle('my-10');
+    womanLinks[5].classList.toggle('mt-10');
+
     isWomanOpened = !(isWomanOpened);
 
 })
@@ -159,6 +351,26 @@ for (let i=0, len=areaOutsideWoman.length; i<len; i++) {
 
 accessoriesDropdown.addEventListener('click', () => {
     accessoriesDropdown.classList.toggle('border-white');
+
+    Object.keys(notAccessoriesLinks).forEach(key => {
+        notAccessoriesLinks[key].classList.toggle('text-38');
+
+        setTimeout(() => {
+            notAccessoriesLinks[key].classList.toggle('absolute');
+        },200)
+    }) 
+
+    Object.keys(accessoriesLinks).forEach(key => {
+        accessoriesLinks[key].classList.toggle('text-24');
+    })
+
+    accessoriesLinks[0].classList.toggle('mb-10');
+    accessoriesLinks[1].classList.toggle('my-10');
+    accessoriesLinks[2].classList.toggle('my-10');
+    accessoriesLinks[3].classList.toggle('my-10');
+    accessoriesLinks[4].classList.toggle('my-10');
+    accessoriesLinks[5].classList.toggle('mt-10');
+
     isAccessoriesOpened = !(isAccessoriesOpened);
 
 })
