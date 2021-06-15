@@ -70,6 +70,7 @@ burgerButton.addEventListener('click', () => {
         
         Object.keys(manLinks).forEach(key => {
             manLinks[key].classList.toggle('text-24');
+            manLinks[key].classList.toggle('opacity-100');
         })
         
         manLinks[0].classList.toggle('mb-10');
@@ -91,6 +92,7 @@ burgerButton.addEventListener('click', () => {
         
         Object.keys(womanLinks).forEach(key => {
             womanLinks[key].classList.toggle('text-24');
+            womanLinks[key].classList.toggle('opacity-100');
         })
         
         womanLinks[0].classList.toggle('mb-10');
@@ -112,6 +114,7 @@ burgerButton.addEventListener('click', () => {
         
         Object.keys(accessoriesLinks).forEach(key => {
             accessoriesLinks[key].classList.toggle('text-24');
+            accessoriesLinks[key].classList.toggle('opacity-100');
         })
         
         accessoriesLinks[0].classList.toggle('mb-10');
@@ -168,8 +171,10 @@ let isAccessoriesOpened = false;
 
 extendMenus.forEach((menu) => {                         // Display the back-arrow icon when a category is selected
     menu.addEventListener('click', () => {
-        if(backArrow.classList.contains('w-0')) {
+        if (backArrow.classList.contains('w-0')) {
             backArrow.classList.remove('w-0');
+        } else if (!(backArrow.classList.contains('w-0'))) {
+            backArrow.classList.add('w-0');
         }
     })
 })
@@ -189,6 +194,7 @@ backArrow.addEventListener('click', () => {
         
         Object.keys(manLinks).forEach(key => {
             manLinks[key].classList.toggle('text-24');
+            manLinks[key].classList.toggle('opacity-100');
         })
         
         manLinks[0].classList.toggle('mb-10');
@@ -202,7 +208,7 @@ backArrow.addEventListener('click', () => {
 
         Object.keys(notWomanLinks).forEach(key => {
             notWomanLinks[key].classList.toggle('text-38');
-            
+
             setTimeout(() => {
                 notWomanLinks[key].classList.toggle('absolute');
             },150)
@@ -210,6 +216,7 @@ backArrow.addEventListener('click', () => {
         
         Object.keys(womanLinks).forEach(key => {
             womanLinks[key].classList.toggle('text-24');
+            womanLinks[key].classList.toggle('opacity-100');
         })
         
         womanLinks[0].classList.toggle('mb-10');
@@ -219,7 +226,7 @@ backArrow.addEventListener('click', () => {
         womanLinks[4].classList.toggle('my-10');
         womanLinks[5].classList.toggle('mt-10');
 
-    } else {
+    } else if (isAccessoriesOpened) {
 
         Object.keys(notAccessoriesLinks).forEach(key => {
             notAccessoriesLinks[key].classList.toggle('text-38');
@@ -231,6 +238,7 @@ backArrow.addEventListener('click', () => {
         
         Object.keys(accessoriesLinks).forEach(key => {
             accessoriesLinks[key].classList.toggle('text-24');
+            accessoriesLinks[key].classList.toggle('opacity-100');
         })
         
         accessoriesLinks[0].classList.toggle('mb-10');
@@ -282,6 +290,7 @@ manDropdown.addEventListener('click', () => {
 
     Object.keys(manLinks).forEach(key => {
         manLinks[key].classList.toggle('text-24');
+        manLinks[key].classList.toggle('opacity-100');
     })
 
     manLinks[0].classList.toggle('mb-10');
@@ -322,6 +331,7 @@ womanDropdown.addEventListener('click', () => {
 
     Object.keys(womanLinks).forEach(key => {
         womanLinks[key].classList.toggle('text-24');
+        womanLinks[key].classList.toggle('opacity-100');
     })
 
     womanLinks[0].classList.toggle('mb-10');
@@ -362,6 +372,7 @@ accessoriesDropdown.addEventListener('click', () => {
 
     Object.keys(accessoriesLinks).forEach(key => {
         accessoriesLinks[key].classList.toggle('text-24');
+        accessoriesLinks[key].classList.toggle('opacity-100');
     })
 
     accessoriesLinks[0].classList.toggle('mb-10');
