@@ -1,2 +1,2 @@
 #CLOTHO
-A Fashion Store Project.
+A fashion store landing page project.
