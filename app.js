@@ -1,3 +1,102 @@
+// Header background images slider:
+
+
+const sliderLabels = [...document.querySelectorAll('.navigation-manual label')];
+let isFirstChecked = document.querySelector("#radio1").checked;
+let isLastChecked = document.querySelector("#radio5").checked;
+
+let counter = 0;
+isFirstChecked = true;
+isLastChecked = false;
+
+for (let n=0; n<5; n++) { 
+
+    sliderLabels[n].addEventListener('click', () => {
+
+        sliderLabels[n].classList.add('bg-white');
+        sliderLabels[n].classList.remove('bg-inactive-indice');
+        sliderLabels[n].classList.remove('hover:bg-hover-indice');
+
+
+        for (let j=0; j<5; j++) {
+
+            if (j !== n) {
+                sliderLabels[j].classList.remove('bg-white');
+                sliderLabels[j].classList.add('bg-inactive-indice');
+            }
+
+        
+            if (j !== n && !(sliderLabels[j].classList.contains('hover:bg-hover-indice'))) {
+                sliderLabels[j].classList.add('hover:bg-hover-indice');
+            }
+
+        }
+
+        counter = n;
+    })
+}
+
+
+
+setInterval(function() {
+    
+    for (let i=1; i<=5; i++) {
+        if (document.querySelector("#radio" + i).checked) {
+            counter = i-1;
+            
+            break;
+        }
+    }
+    
+    if (counter < 4) {
+        
+        sliderLabels[counter+1].classList.remove('hover:bg-hover-indice');
+
+        for (let j=0; j<5; j++) {
+            if (j!==(counter+1) && !(sliderLabels[j].classList.contains('hover:bg-hover-indice'))) {
+                sliderLabels[j].classList.add('hover:bg-hover-indice');
+            }
+        }
+        
+        document.querySelector("#radio" + ((counter+1)+1)).checked = true;
+
+        // Remove the white background color of the last active index:
+        sliderLabels[counter].classList.add('bg-inactive-indice');
+        sliderLabels[counter].classList.remove('bg-white');
+
+        // Add white background color to the new active index:
+        sliderLabels[counter+1].classList.remove('bg-inactive-indice');
+        sliderLabels[counter+1].classList.add('bg-white');
+
+        if (counter>0) isFirstChecked = false;
+    }  
+
+    else {
+        counter = 1;
+        document.querySelector("#radio1").checked = true;
+        sliderLabels[0].classList.remove('bg-inactive-indice');
+        sliderLabels[0].classList.remove('hover:bg-hover-indice');
+        sliderLabels[0].classList.add('bg-white');
+
+        sliderLabels[4].classList.remove('bg-white');
+        sliderLabels[4].classList.add('bg-inactive-indice');
+        sliderLabels[4].classList.add('hover:bg-hover-indice');
+
+        isLastChecked = false;
+        return; 
+    }
+
+}, 5000);
+
+
+
+
+
+
+
+
+
+
 // MOBILE HEADER:
 
 

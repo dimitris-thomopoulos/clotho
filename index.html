@@ -37,20 +37,20 @@
                 </div>
                 <div class="navigation-auto z-10 absolute w-420 bottom-22 justify-center opacity-100 transition opacity duration-200 ease-in-out hidden md:flex">
                     <div class="auto-btn1 w-40 h-5 mr-20 cursor-pointer"></div>
-                    <div class="auto-btn2 w-40 h-5 mr-20 bg-inactive-indice cursor-pointer"></div>
-                    <div class="auto-btn3 w-40 h-5 mr-20 bg-inactive-indice cursor-pointer"></div>
-                    <div class="auto-btn4 w-40 h-5 mr-20 bg-inactive-indice cursor-pointer"></div>
-                    <div class="auto-btn5 w-40 h-5 bg-inactive-indice cursor-pointer"></div>
+                    <div class="auto-btn2 w-40 h-5 mr-20 cursor-pointer"></div>
+                    <div class="auto-btn3 w-40 h-5 mr-20 cursor-pointer"></div>
+                    <div class="auto-btn4 w-40 h-5 mr-20 cursor-pointer"></div>
+                    <div class="auto-btn5 w-40 h-5 cursor-pointer"></div>
                 </div>
 
             </div>
             
             <div class="navigation-manual z-10 absolute w-420 -mt-27 justify-center opacity-100 transition opacity duration-200 ease-in-out hidden md:flex">
-                <label id="first-slide" for="radio1" class="manual-btn w-40 h-5 transition duration-300 ease-in-out cursor-pointer mr-20"></label>
-                <label for="radio2" class="manual-btn w-40 h-5 hover:bg-hover-indice duration-300 ease-in-out cursor-pointer mr-20"></label>
-                <label for="radio3" class="manual-btn w-40 h-5 hover:bg-hover-indice duration-300 ease-in-out cursor-pointer mr-20"></label>
-                <label for="radio4" class="manual-btn w-40 h-5 hover:bg-hover-indice duration-300 ease-in-out cursor-pointer mr-20"></label>
-                <label for="radio5" class="manual-btn w-40 h-5 hover:bg-hover-indice duration-300 ease-in-out cursor-pointer"></label>
+                <label id="first-slide" for="radio1" class="manual-btn w-40 h-5 bg-white hover:bg-hover-indice transition duration-300 ease-in-out cursor-pointer mr-20"></label>
+                <label for="radio2" class="manual-btn w-40 h-5 bg-inactive-indice hover:bg-hover-indice duration-300 ease-in-out cursor-pointer mr-20"></label>
+                <label for="radio3" class="manual-btn w-40 h-5 bg-inactive-indice hover:bg-hover-indice duration-300 ease-in-out cursor-pointer mr-20"></label>
+                <label for="radio4" class="manual-btn w-40 h-5 bg-inactive-indice hover:bg-hover-indice duration-300 ease-in-out cursor-pointer mr-20"></label>
+                <label for="radio5" class="manual-btn w-40 h-5 bg-inactive-indice hover:bg-hover-indice duration-300 ease-in-out cursor-pointer"></label>
             </div>
             
             <div class="sliderDarken absolute top-0 left-0 w-full h-full -z-5 opacity-0 bg-transparent transition all duration-200 ease-in-out flex justify-center items-center">
@@ -136,54 +136,8 @@
         <img class="lazy" alt="A lazy image test" data-src="./images/main2.jpg">
     </section>
 
-    <script type="text/javascript">
 
-        document.querySelector('#first-slide').addEventListener('click', function(){
-            document.querySelector('#first-slide').style.background = 'white';
-        });
-
-        if (!(document.querySelector("#radio1").checked)) {
-            document.querySelector('#first-slide').addEventListener('mouseout', function(){
-            this.style.background = '#5A5A5A';})
-
-            document.querySelector('#first-slide').addEventListener('mouseover', function(){
-                this.style.background = '#9D9D9D';
-            });
-        }
-        
-        let counter = 1;
-        let isFirstChecked = document.querySelector("#radio1").checked;
-        let isLastChecked = document.querySelector("#radio5").checked;
-        document.querySelector('#first-slide').style.background = 'white';
-        isFirstChecked = true;
-        isLastChecked = false;
-
-        setInterval(function() {
-
-            for (let i=1; i<=5; i++) {
-                if (document.querySelector("#radio" + i).checked) {
-                    counter = i+1;
-                    break;
-                }
-            }
-
-            if (counter <= 5) {
-                document.querySelector("#radio" + counter).checked = true;
-                isFirstChecked = false;
-            }  
-
-            else {
-                counter = 1;
-                document.querySelector("#radio1").checked = true;
-                document.querySelector('#first-slide').style.background = 'white';
-                isLastChecked = false;
-                return; 
-            }
-
-            document.querySelector('#first-slide').style.background = '#5A5A5A';
-
-        }, 5000);
-    </script>
+    
     <script src="./app.js"></script>
     <script src="https://cdn.jsdelivr.net/npm/vanilla-lazyload@17.3.2/dist/lazyload.min.js"></script>
 </body>
