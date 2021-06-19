@@ -85,15 +85,18 @@ for (let n=0; n<5; n++) {
 
         counter = n;
 
-        // clearInterval(sliderInterval);
+        clearInterval(1);
+        sliderInterval = setInterval(imageSlider, 5000);
+        clearInterval(sliderInterval-1);
     })
 }
 
-var sliderInterval = setInterval(imageSlider, 5000);
+var sliderInterval;
+setInterval(imageSlider, 5000);
 
 
-    
-    
+
+
     
     
     
