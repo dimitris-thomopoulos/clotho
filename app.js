@@ -595,3 +595,18 @@ widthMatch.addEventListener('change', function(mm) {
     }
 
 });
+
+
+
+
+
+
+
+
+// SEASON ARRIVALS INTRO TITLE:
+
+
+const seasonArrivalsTitleHr = document.querySelector('#new-arrivals-title hr');
+const seasonArrivalsTitleH2 = document.querySelector('#new-arrivals-title h2');
+
+seasonArrivalsTitleHr.width = `${seasonArrivalsTitleH2.clientWidth + parseFloat(window.getComputedStyle(seasonArrivalsTitleH2).marginRight)}`;

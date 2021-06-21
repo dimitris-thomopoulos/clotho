@@ -231,6 +231,7 @@ module.exports = {
       18: '18px',
       20: '20px',
       22: '22px',
+      23: '23px',
       24: '24px',
       26: '26px',
       28: '28px',
@@ -248,6 +249,7 @@ module.exports = {
 
     letterSpacing: {
       title: '0.135em',
+      subtittle: '0.03em',
       sectiontitle: '0.085em',
       normal: '0',
       wide: '0.1em',
@@ -739,6 +741,7 @@ module.exports = {
         '20': '20px',
         '25': '25px',
         '50': '50px',
+        '41': '41px',
         '51': '51px',
         '76': '76px',
         '1em': '1em',
