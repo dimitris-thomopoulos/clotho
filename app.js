@@ -160,8 +160,13 @@ burgerButton.addEventListener('click', () => {
     // Remove the underline of the active category:
     
     manDropdown.classList.remove('border-white');
+    manDropdown.classList.remove('link-hover-effect');
+
     womanDropdown.classList.remove('border-white');
+    womanDropdown.classList.remove('link-hover-effect');
+
     accessoriesDropdown.classList.remove('border-white');
+    accessoriesDropdown.classList.remove('link-hover-effect');
 
 
     // Close all dropdown extend menus:
@@ -288,7 +293,13 @@ extendMenus.forEach((menu) => {                         // Display the back-arro
 
 backArrow.addEventListener('click', () => {
         
+    manDropdown.classList.remove('link-hover-effect');
+    womanDropdown.classList.remove('link-hover-effect');
+    accessoriesDropdown.classList.remove('link-hover-effect');
+
+
     // Close the current category's links:
+    
     if(isManOpened) {
         Object.keys(notManLinks).forEach(key => {
             notManLinks[key].classList.toggle('text-38');
@@ -385,6 +396,7 @@ backArrow.addEventListener('click', () => {
 
 manDropdown.addEventListener('click', () => {
     manDropdown.classList.toggle('border-white');
+    manDropdown.classList.toggle('link-hover-effect');
 
     Object.keys(notManLinks).forEach(key => {
         notManLinks[key].classList.toggle('text-38');
@@ -426,6 +438,7 @@ for (let i=0, len=areaOutsideMan.length; i<len; i++) {
 
 womanDropdown.addEventListener('click', () => {
     womanDropdown.classList.toggle('border-white');
+    womanDropdown.classList.toggle('link-hover-effect');
 
     Object.keys(notWomanLinks).forEach(key => {
         notWomanLinks[key].classList.toggle('text-38');
@@ -467,6 +480,7 @@ for (let i=0, len=areaOutsideWoman.length; i<len; i++) {
 
 accessoriesDropdown.addEventListener('click', () => {
     accessoriesDropdown.classList.toggle('border-white');
+    accessoriesDropdown.classList.toggle('link-hover-effect');
 
     Object.keys(notAccessoriesLinks).forEach(key => {
         notAccessoriesLinks[key].classList.toggle('text-38');

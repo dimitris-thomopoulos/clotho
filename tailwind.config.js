@@ -1,3 +1,5 @@
+const plugin = require('tailwindcss/plugin');
+
 module.exports = {
   purge: [],
   darkMode: false, // or 'media' or 'class'
@@ -713,6 +715,13 @@ module.exports = {
         '2000': '2000ms',
       },
 
+      transformOrigin: {
+        'full': '100%',
+        '0-50/100': '0% 50%',
+        '50/100': '50%',
+        '0': '0%',
+      },
+
       lineHeight: {
         '0.5': '0.5px',
         '1': '1px',
@@ -742,6 +751,8 @@ module.exports = {
   variants: {
     extend: {
       borderWidth: ['hover'],
+      transform: ['hover', 'focus'],
+      transformOrigin: ['hover', 'focus'],
     },
   },
   plugins: [],
