@@ -127,7 +127,7 @@ const autoIndices = document.querySelector('.navigation-auto');
 const sliderDarken = document.querySelector('.sliderDarken');
 
 const arrowScrollMobile = document.querySelector('.arrow-scroll-sm');
-// const arrowScrollDesktop = document.querySelector('.arrow-scroll-lg');
+const arrowScrollDesktop = document.querySelector('.arrow-scroll-lg');
 
 let isDropdownOpened = false;
 
@@ -542,6 +542,21 @@ if (screen.width <= 420) {
     
     
     }, 2000);
+
+} else {
+
+    window.desktopArrow = setInterval ( () => {
+        arrowScrollDesktop.style.transform = 'translateY(10px)';
+        arrowScrollDesktop.style.transition = 'all 1s ease-in-out';
+    
+        setTimeout ( () => {
+            arrowScrollDesktop.style.transform = 'translateY(-10px)';
+            arrowScrollDesktop.style.transition = 'all 1s ease-in-out';
+    
+        }, 1000);
+        
+    
+    }, 2000);
 }
 
 
@@ -556,6 +571,8 @@ widthMatch.addEventListener('change', function(mm) {
     if (mm.matches) {
         // it matches the media query: that is, min-width is <= 420px
         
+        clearInterval(desktopArrow);
+
         window.mobileArrow = setInterval ( () => {
                 arrowScrollMobile.style.transform = 'translateY(10px)';
                 arrowScrollMobile.style.transition = 'transform 1s ease-in-out';
@@ -580,18 +597,18 @@ widthMatch.addEventListener('change', function(mm) {
         // desktop (THE DESKTOP ARROW IS USED IN THE SEASON ARRIVALS INTRO PAGE, NOT THE HEADER)
         // -TODO: Implement the animation for the new svg with the new stroke and text
         
-        // setInterval ( () => {
-        //     arrowScrollDesktop.style.transform = 'translateY(10px)';
-        //     arrowScrollDesktop.style.transition = 'all 1s ease-in-out';
+        window.desktopArrow = setInterval ( () => {
+            arrowScrollDesktop.style.transform = 'translateY(10px)';
+            arrowScrollDesktop.style.transition = 'all 1s ease-in-out';
         
-        //     setTimeout ( () => {
-        //         arrowScrollDesktop.style.transform = 'translateY(-10px)';
-        //         arrowScrollDesktop.style.transition = 'all 1s ease-in-out';
+            setTimeout ( () => {
+                arrowScrollDesktop.style.transform = 'translateY(-10px)';
+                arrowScrollDesktop.style.transition = 'all 1s ease-in-out';
         
-        //     }, 1000);
+            }, 1000);
             
         
-        // }, 2000);
+        }, 2000);
     }
 
 });

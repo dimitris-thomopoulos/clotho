@@ -35,7 +35,7 @@
                 <div class="slide fifth w-20/100 transition-all duration-1000 bg-main5-sm bg-cover bg-no-repeat bg-center">
                     <!-- <img src="public/build/images/main5-sm.jpg" class="w-420 h-900 object-cover bg-no-repeat " alt="fifth-slide"> -->
                 </div>
-                <div class="navigation-auto z-10 absolute w-420 bottom-22 justify-center opacity-100 transition opacity duration-200 ease-in-out hidden md:flex">
+                <div class="navigation-auto z-10 absolute w-420 bottom-22 justify-center opacity-100 transition opacity duration-200 ease-in-out hidden sm:flex">
                     <div class="auto-btn1 w-40 h-5 mr-20 cursor-pointer"></div>
                     <div class="auto-btn2 w-40 h-5 mr-20 cursor-pointer"></div>
                     <div class="auto-btn3 w-40 h-5 mr-20 cursor-pointer"></div>
@@ -45,7 +45,7 @@
 
             </div>
             
-            <div class="navigation-manual z-10 absolute w-420 -mt-27 justify-center opacity-100 transition opacity duration-200 ease-in-out hidden md:flex">
+            <div class="navigation-manual z-10 absolute w-420 -mt-27 justify-center opacity-100 transition opacity duration-200 ease-in-out hidden sm:flex">
                 <label id="first-slide" for="radio1" class="manual-btn w-40 h-5 bg-white hover:bg-hover-indice transition duration-300 ease-in-out cursor-pointer mr-20"></label>
                 <label for="radio2" class="manual-btn w-40 h-5 bg-inactive-indice hover:bg-hover-indice duration-300 ease-in-out cursor-pointer mr-20"></label>
                 <label for="radio3" class="manual-btn w-40 h-5 bg-inactive-indice hover:bg-hover-indice duration-300 ease-in-out cursor-pointer mr-20"></label>
@@ -96,7 +96,7 @@
         <h1 class="absolute top-43/100 text-71 text-white font-ModernNo tracking-title leading-76 opacity-100 transition all duration-200 ease-in-out">CLOTHO</h1>
 
         <button id="header-btn" class="w-225 h-62 absolute bottom-180 bg-header-btn-bg border-1 border-white text-white text-23 tracking-wide
-        opacity-100 transition all duration-200 ease-in-out"><a href="#">SHOP NOW</a></button>
+        opacity-100 transition all duration-200 ease-in-out"><a href="#" class="block py-15 mx-0">SHOP NOW</a></button>
 
         <div class="burger z-30 absolute top-0 right-0 w-115 h-93 flex cursor-pointer">
             <div class="burger-lines w-90 h-23 absolute top-45 right-45 flex flex-col justify-between items-center">
@@ -117,13 +117,10 @@
             
 
         <!-- mobile arrow -->
-        <img src="./public/build/images/arrow-scroll-sm.svg" alt="scroll down arrow"   
+        <img src="./public/build/images/arrow-scroll-sm.svg" alt="scroll-down-arrow"   
         class="arrow-scroll-sm absolute mx-auto bottom-40 opacity-100 transition-opacity duration-200 ease-in-out
-        md:hidden">
+        sm:hidden">
 
-        <!-- desktop arrow - TODO: Increase the arrow's stroke to 4 and add the 'see more' text to the svg--> 
-        <!-- <img src="./public/build/images/arrow-scroll-lg.svg" alt="scroll down arrow"
-        class="arrow-scroll-lg absolute mx-auto bottom-40 hidden md:inline-block"> -->
 
     </header>
 
@@ -149,7 +146,7 @@
 
         <!-- PRODUCTS PRICE TAGS -->
         
-        <div class="inline-flex absolute top-340 right-45 md:hidden">
+        <div class="inline-flex absolute top-340 right-45">
             <svg id="coat-price-tag" width="137" height="85" viewBox="0 0 137 77" fill="transparent" xmlns="http://www.w3.org/2000/svg">
                 <line x1="73.2339" y1="36.4419" x2="5.23395" y2="72.4419" stroke="white"/>
                 <circle cx="3.5" cy="73.5" r="3.5" fill="white"/>
@@ -164,7 +161,7 @@
         </div>
 
 
-        <div class="inline-flex absolute bottom-225 left-80 md:hidden">
+        <div class="inline-flex absolute bottom-225 left-80">
             <svg id="pants-price-tag" width="119" height="68" viewBox="0 0 119 68" fill="transparent" xmlns="http://www.w3.org/2000/svg">
                 <line x1="115.688" y1="3.35131" x2="63.3558" y2="56.3513" stroke="white"/>
                 <circle cx="115.5" cy="3.5" r="3.5" fill="white"/>
@@ -179,7 +176,7 @@
         </div>
         
 
-        <div class="inline-flex absolute bottom-320 right-20 md:hidden">
+        <div class="inline-flex absolute bottom-320 right-20">
             <svg id="suitcase-price-tag" width="103" height="80" viewBox="0 0 103 63" fill="transparent" xmlns="http://www.w3.org/2000/svg">
                 <line x1="39.2661" y1="36.4233" x2="4.26609" y2="58.4233" stroke="white"/>
                 <circle cx="3.5" cy="59.5" r="3.5" fill="white"/>
@@ -199,6 +196,11 @@
         
         
         <p id="new-arrivals-desc" class="inline max-w-90/100 text-white text-23 leading-25 absolute self-center bottom-60">New arrivals are available for you every single week. Don’t miss them.</p>
+
+        <!-- desktop arrow - TODO: Increase the arrow's stroke to 4 and add the 'see more' text to the svg--> 
+        <img src="./public/build/images/arrow-scroll-lg.svg" alt="scroll-down-arrow-see-more"
+        class="arrow-scroll-lg w-87 h-72 absolute mx-auto bottom-30 left-0 right-0 hidden sm:inline">
+
         <div class="white-transition w-full h-50 absolute bottom-0" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);"></div>
     </section>
 
