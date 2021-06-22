@@ -86,8 +86,8 @@ for (let n=0; n<5; n++) {
         counter = n;
 
         clearInterval(1);
+        clearInterval(sliderInterval);
         sliderInterval = setInterval(imageSlider, 5000);
-        clearInterval(sliderInterval-1);
     })
 }
 
