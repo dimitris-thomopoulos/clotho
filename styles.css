@@ -62,6 +62,12 @@ body {
   flex-direction: column;
 }
 
+img {
+    -webkit-backface-visibility: hidden; 
+    -ms-transform: translateZ(0); /* IE 9 */
+    -webkit-transform: translateZ(0); /* Chrome, Safari, Opera */
+    transform: translateZ(0);
+}
 
 h1,h2,h3,h4,h5,h6 {
   line-height: normal;
@@ -317,3 +323,149 @@ header h1.menu-active {
 
 
 
+// SEASON ARRIVALS INTRO:
+
+
+
+
+// Price tags hover effect:
+
+
+
+// Mobile man coat price tag:
+
+#coat-price-tag > a > rect {
+
+  transition: all 0.3s ease-in-out;
+}
+
+#coat-price-tag a path:nth-of-type(1) {
+  fill: white;
+  transition: all 0.3s ease-in-out;
+}
+
+#coat-price-tag a path:nth-of-type(1):hover {
+  cursor: pointer;
+  fill: black;
+  transition: all 0.3s ease-in-out;
+}
+
+#coat-price-tag a rect:hover ~ path:nth-of-type(1) {
+  cursor: pointer;
+  fill: black;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+
+#coat-price-tag > path:hover {
+  cursor: default;
+  transform: none;
+}
+
+#coat-price-tag > path {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+#coat-price-tag a:hover ~ path {
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+// Mobile man pants price tag:
+
+#pants-price-tag > a > rect {
+  
+  transition: all 0.3s ease-in-out;
+}
+
+#pants-price-tag a path:nth-of-type(1) {
+  fill: white;
+  transition: all 0.3s ease-in-out;
+}
+
+#pants-price-tag a path:nth-of-type(1):hover {
+  cursor: pointer;
+  fill: black;
+  transition: all 0.3s ease-in-out;
+}
+
+#pants-price-tag a rect:hover ~ path:nth-of-type(1) {
+  cursor: pointer;
+  fill: black;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+
+#pants-price-tag > path:hover {
+  cursor: default;
+  transform: none;
+}
+
+#pants-price-tag > path {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+#pants-price-tag a:hover ~ path {
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+
+
+
+
+// Mobile man suitcase price tag:
+
+#suitcase-price-tag > a > rect {
+  
+  transition: all 0.3s ease-in-out;
+}
+
+#suitcase-price-tag a path:nth-of-type(1) {
+  fill: white;
+  transition: all 0.3s ease-in-out;
+}
+
+#suitcase-price-tag a path:nth-of-type(1):hover {
+  cursor: pointer;
+  fill: black;
+  transition: all 0.3s ease-in-out;
+}
+
+#suitcase-price-tag a rect:hover ~ path:nth-of-type(1) {
+  cursor: pointer;
+  fill: black;
+  transition: all 0.3s ease-in-out;
+}
+
+
+
+
+#suitcase-price-tag > path:hover {
+  cursor: default;
+  transform: none;
+}
+
+#suitcase-price-tag > path {
+  transform: translateY(0);
+  transition: all 0.3s ease-in-out;
+}
+
+#suitcase-price-tag a:hover ~ path {
+  transform: translateY(-5px);
+  transition: all 0.3s ease-in-out;
+}

@@ -606,7 +606,119 @@ widthMatch.addEventListener('change', function(mm) {
 // SEASON ARRIVALS INTRO TITLE:
 
 
+
+// HR automatic width calculator:
+
 const seasonArrivalsTitleHr = document.querySelector('#new-arrivals-title hr');
 const seasonArrivalsTitleH2 = document.querySelector('#new-arrivals-title h2');
 
 seasonArrivalsTitleHr.width = `${seasonArrivalsTitleH2.clientWidth + parseFloat(window.getComputedStyle(seasonArrivalsTitleH2).marginRight)}`;
+
+
+// Price tags background color flashing interval: 
+
+const priceTagsBackgrounds = [...document.querySelectorAll('svg a rect')];
+const priceTagsPrice = [...document.querySelectorAll("svg a path")];
+var timeout0;
+var timeout1;
+var timeout2;
+
+var timer0 = setInterval ( () => {
+    priceTagsBackgrounds[0].style.fill = 'rgba(255,255,255,0.3)'
+    priceTagsBackgrounds[0].style.transition = 'fill 1s ease-in-out';
+
+timeout0 = setTimeout ( () => {
+        priceTagsBackgrounds[0].style.fill = 'transparent'
+        priceTagsBackgrounds[0].style.transition = 'fill 1s ease-in-out';
+    
+    }, 1000);
+
+}, 2000);
+
+
+var timer1 = setInterval ( () => {
+    priceTagsBackgrounds[1].style.fill = 'rgba(255,255,255,0.3)'
+    priceTagsBackgrounds[1].style.transition = 'fill 1s ease-in-out';
+
+timeout1 = setTimeout ( () => {
+        priceTagsBackgrounds[1].style.fill = 'transparent'
+        priceTagsBackgrounds[1].style.transition = 'fill 1s ease-in-out';
+    
+    }, 1000);
+
+}, 2000);
+
+
+var timer2 = setInterval ( () => {
+    priceTagsBackgrounds[2].style.fill = 'rgba(255,255,255,0.3)'
+    priceTagsBackgrounds[2].style.transition = 'fill 1s ease-in-out';
+
+timeout2 = setTimeout ( () => {
+        priceTagsBackgrounds[2].style.fill = 'transparent'
+        priceTagsBackgrounds[2].style.transition = 'fill 1s ease-in-out';
+    
+    }, 1000);
+
+}, 2000);
+
+
+
+
+
+
+priceTagsBackgrounds[0].addEventListener('mouseenter', ()=> {
+
+    clearInterval(timer0);
+    clearTimeout(timeout0);
+    priceTagsBackgrounds[0].style.fill = 'white';
+    priceTagsBackgrounds[0].style.transition = 'fill 0.3s ease-in-out';
+        
+}) 
+
+priceTagsBackgrounds[0].addEventListener('mouseout', ()=> {
+    priceTagsBackgrounds[0].style.fill = 'transparent';
+    priceTagsBackgrounds[0].style.transition = 'fill 0.3s ease-in-out';
+})
+priceTagsPrice[0].addEventListener('mouseenter', () => {
+    priceTagsBackgrounds[0].style.fill = 'white';
+})
+
+
+
+
+
+priceTagsBackgrounds[1].addEventListener('mouseenter', ()=> {
+    
+    clearInterval(timer1);
+    clearTimeout(timeout1);
+    priceTagsBackgrounds[1].style.fill = 'white';
+    priceTagsBackgrounds[1].style.transition = 'fill 0.3s ease-in-out';
+        
+})
+priceTagsBackgrounds[1].addEventListener('mouseout', ()=> {
+    priceTagsBackgrounds[1].style.fill = 'transparent';
+    priceTagsBackgrounds[1].style.transition = 'fill 0.3s ease-in-out';
+})
+priceTagsPrice[1].addEventListener('mouseenter', () => {
+    priceTagsBackgrounds[1].style.fill = 'white';
+})
+
+
+
+
+
+priceTagsBackgrounds[2].addEventListener('mouseenter', ()=> {
+  
+    clearInterval(timer2);
+    clearTimeout(timeout2);
+    priceTagsBackgrounds[2].style.fill = 'white';
+    priceTagsBackgrounds[2].style.transition = 'fill 0.3s ease-in-out';
+        
+})
+priceTagsBackgrounds[2].addEventListener('mouseout', ()=> {
+    priceTagsBackgrounds[2].style.fill = 'transparent';
+    priceTagsBackgrounds[2].style.transition = 'fill 0.3s ease-in-out';
+})
+priceTagsPrice[2].addEventListener('mouseenter', () => {
+    priceTagsBackgrounds[2].style.fill = 'white';
+})
