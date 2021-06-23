@@ -1,3 +1,14 @@
+// Header fade-in animation:
+
+const headerFadeInAnimation = document.querySelector('#header-fadein');
+headerFadeInAnimation.classList.remove('bg-white');
+headerFadeInAnimation.style.transition = ('all 0.5s ease-out');
+
+setTimeout( () => {
+    headerFadeInAnimation.classList.add('hidden');
+}, 500)
+
+
 // Header background images slider:
 
 
@@ -97,11 +108,11 @@ setInterval(imageSlider, 5000);
 
 
 
+
+
     
     
-    
-    
-    
+
 
 
 // MOBILE HEADER:
@@ -623,14 +634,81 @@ widthMatch.addEventListener('change', function(mm) {
 // SEASON ARRIVALS INTRO TITLE:
 
 
-
-// HR automatic width calculator:
+// h2 and h3 translate transitions on scroll:
 
 const seasonArrivalsTitleHr = document.querySelector('#new-arrivals-title hr');
 const seasonArrivalsTitleH2 = document.querySelector('#new-arrivals-title h2');
+const seasonArrivalsTitleH3 = document.querySelector('#new-arrivals-title h3');
+const seasonArrivalsDesc = document.querySelector('#new-arrivals-desc');
+const seasonArrivalsPriceTags = [...document.querySelectorAll('.price-tag')];
 
+var seasonArrivalsFadeIn; 
+
+var scroll = function(callback) { 
+    seasonArrivalsFadeIn = window.setInterval(callback, 1000/60)
+};
+
+
+function isElementInViewport(el) {
+
+    // Additional support for jQuery:
+    
+    // if (typeof jQuery === "function" && el instanceof jQuery) {
+    //   el = el[0];
+    // }
+    
+    var rect = el.getBoundingClientRect();
+    return (
+      (rect.top <= 0
+        && rect.bottom >= 0)
+      ||
+      (rect.bottom >= (window.innerHeight || document.documentElement.clientHeight) &&
+        rect.top <= (window.innerHeight || document.documentElement.clientHeight))
+      ||
+      (rect.top >= 0 &&
+        rect.bottom <= (window.innerHeight || document.documentElement.clientHeight))
+    );
+  }
+
+
+
+function h2ScrollAnimation() {
+    if (isElementInViewport(seasonArrivalsTitleH2)) {
+        seasonArrivalsTitleH2.classList.remove('-left-420');
+        seasonArrivalsTitleH2.classList.add('left-0');
+        seasonArrivalsTitleH2.style.transition = ('all 0.7s ease-out');
+        
+        seasonArrivalsTitleHr.classList.remove('opacity-0');
+        seasonArrivalsTitleHr.style.transition = ('opacity 0.7s ease-out');
+    }
+}
+
+function h3ScrollAnimation() {
+    if (isElementInViewport(seasonArrivalsTitleH3)) {
+        seasonArrivalsTitleH3.classList.remove('-mr-106');
+        seasonArrivalsTitleH3.classList.add('mr-10');
+        seasonArrivalsTitleH3.style.transition = ('all 0.7s ease-out');
+
+        seasonArrivalsPriceTags.forEach(priceTag => {
+            priceTag.classList.remove('opacity-0');
+            priceTag.style.transition = ('all 2.5s ease-in-out');
+        })
+
+        seasonArrivalsDesc.classList.remove('opacity-0');
+        seasonArrivalsDesc.style.transition = ('opacity 0.7s ease-in-out');
+
+        clearInterval(seasonArrivalsFadeIn);
+    }
+}
+
+scroll(h2ScrollAnimation);
+scroll(h3ScrollAnimation);
+
+
+
+
+// HR automatic width calculator:
 seasonArrivalsTitleHr.width = `${seasonArrivalsTitleH2.clientWidth + parseFloat(window.getComputedStyle(seasonArrivalsTitleH2).marginRight)}`;
-
 
 // Price tags background color flashing interval: 
 
