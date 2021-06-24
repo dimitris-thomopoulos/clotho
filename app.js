@@ -102,8 +102,7 @@ for (let n=0; n<5; n++) {
     })
 }
 
-var sliderInterval;
-setInterval(imageSlider, 5000);
+var sliderInterval = setInterval(imageSlider, 5000);
 
 
 
@@ -690,12 +689,14 @@ function h3ScrollAnimation() {
         seasonArrivalsTitleH3.style.transition = ('all 0.7s ease-out');
 
         seasonArrivalsPriceTags.forEach(priceTag => {
-            priceTag.classList.remove('opacity-0');
-            priceTag.style.transition = ('all 2.5s ease-in-out');
+            setTimeout( () => {
+                priceTag.classList.remove('opacity-0');
+                priceTag.style.transition = ('all 2s ease-in-out');
+            }, 1000)
         })
 
         seasonArrivalsDesc.classList.remove('opacity-0');
-        seasonArrivalsDesc.style.transition = ('opacity 0.7s ease-in-out');
+        seasonArrivalsDesc.style.transition = ('opacity 2s ease-in-out');
 
         clearInterval(seasonArrivalsFadeIn);
     }
@@ -817,3 +818,43 @@ priceTagsBackgrounds[2].addEventListener('mouseout', ()=> {
 priceTagsPrice[2].addEventListener('mouseenter', () => {
     priceTagsBackgrounds[2].style.fill = 'white';
 })
+
+
+
+
+
+
+
+
+// SEASON ARRIVALS PRODUCTS PAGE:
+
+const products = [...document.querySelectorAll('#products a')];
+const productsImages = [...document.querySelectorAll('#products a img')];
+const productsPrices = [...document.querySelectorAll('.product-price')];
+
+for (let ii=0; ii<products.length; ii++) {
+    
+    products[ii].addEventListener('mouseenter', () => {
+        productsPrices[ii].classList.toggle('bg-product-price');
+        productsPrices[ii].classList.toggle('bg-white');
+        productsPrices[ii].classList.toggle('border-white');
+
+        productsPrices[ii].style.transition = ('all 0.2s ease-in-out');
+
+
+        productsImages[ii].classList.toggle('scale-125');
+        productsImages[ii].style.transition = ('all 0.2s ease-in-out');
+    });
+
+    products[ii].addEventListener('mouseleave', () => {
+        productsPrices[ii].classList.toggle('bg-white');
+        productsPrices[ii].classList.toggle('bg-product-price');
+        productsPrices[ii].classList.toggle('border-white');
+
+        productsPrices[ii].style.transition = ('all 0.2s ease-in-out');
+
+
+        productsImages[ii].classList.toggle('scale-125');
+        productsImages[ii].style.transition = ('all 0.2s ease-in-out');
+    });
+}

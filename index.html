@@ -10,7 +10,7 @@
 <body class="flex flex-col">
     
     <header class="main-bg relative w-420 h-900 flex flex-col items-center bg-cover bg-no-repeat bg-center">
-        <div id="header-fadein" class="w-full h-full absolute top-0 bg-white"></div>
+        <div id="header-fadein" class="w-full h-full absolute top-0 z-100 bg-white"></div>
         
             <div class="slider w-420 h-900 overflow-hidden">
                 
@@ -97,7 +97,7 @@
         <h1 class="absolute top-43/100 text-71 text-white font-ModernNo tracking-title leading-76 opacity-100 transition all duration-200 ease-in-out">CLOTHO</h1>
 
         <button id="header-btn" class="w-225 h-62 absolute bottom-180 bg-header-btn-bg border-1 border-white text-white text-23 tracking-wide
-        opacity-100 transition all duration-200 ease-in-out"><a href="#" class="block py-15 mx-0">SHOP NOW</a></button>
+        opacity-100 transition all duration-300 ease-in-out"><a href="#" class="block py-15 mx-0">SHOP NOW</a></button>
 
         <div class="burger z-30 absolute top-0 right-0 w-115 h-93 flex cursor-pointer">
             <div class="burger-lines w-90 h-23 absolute top-45 right-45 flex flex-col justify-between items-center">
@@ -204,13 +204,73 @@
         
         <p id="new-arrivals-desc" class="inline max-w-90/100 text-white text-23 leading-25 opacity-0 absolute self-center bottom-60">New arrivals are available for you every single week. Don’t miss them.</p>
 
-        <!-- desktop arrow - TODO: Increase the arrow's stroke to 4 and add the 'see more' text to the svg--> 
+        <!-- desktop arrow --> 
         <img src="./public/build/images/arrow-scroll-lg.svg" alt="scroll-down-arrow-see-more"
         class="arrow-scroll-lg w-87 h-72 absolute mx-auto bottom-30 left-0 right-0 hidden">
 
         <div class="white-transition w-full h-50 absolute bottom-0" style="background: linear-gradient(180deg, rgba(255, 255, 255, 0) 0%, #FFFFFF 100%);"></div>
     </section>
 
+
+
+    <section id="season-arrivals-products" class="w-420 h-2873 relative bg-clotho-pattern-mobile flex flex-col items-center">
+        
+    <div id="products" class="mt-76 flex flex-col h-2573 items-center justify-between">
+
+        <a href="#" id="white-coat" class="w-290 h-316 overflow-hidden shadow-product flex flex-col items-center">
+            <img src="./public/build/images/white-coat-girl-mobile.jpg" class="z-15 transform" loading="lazy" alt="white-coat-girl-mobile">
+            <div class="product-price w-288 h-66 z-20 border-b-1 border-l-1 border-r-1 border-product-price flex flex-col justify-center text-center bg-product-price text-white-coat-text text-23 leading-25">
+                White Coat<br>$79.99
+            </div>
+        </a>
+
+        <a href="#" id="grey-jeans" class="w-290 h-316 overflow-hidden shadow-product flex flex-col items-center">
+            <img src="./public/build/images/grey-jeans-man-mobile.jpg" class="z-15 transform" loading="lazy" alt="grey-jeans-man">
+            <div class="product-price w-288 h-66 z-20 border-b-1 border-l-1 border-r-1 border-product-price flex flex-col justify-center text-center bg-product-price text-black text-23 leading-25">
+                Grey Jeans<br>$49.99
+            </div>
+        </a>
+
+        <a href="#" id="solitaire-off-shoulder" class="w-290 h-316 overflow-hidden shadow-product flex flex-col items-center">
+            <img src="./public/build/images/solitaire-offshoulder-girl-mobile.jpg" class="z-15 transform" loading="lazy" alt="solitaire-offshoulder-girl">
+            <div class="product-price w-288 h-66 z-20 border-b-1 border-l-1 border-r-1 border-product-price flex flex-col justify-center text-center bg-product-price text-solitaire-text text-23 leading-25">
+                Solitaire Off-Shoulder<br>$39.99
+            </div>
+        </a>
+
+        <a href="#" id="dark-grey-coat" class="w-290 h-316 overflow-hidden shadow-product flex flex-col items-center">
+            <img src="./public/build/images/dark-grey-coat-mobile.jpg" class="z-15 transform" loading="lazy" alt="dark-grey-coat-girl">
+            <div class="product-price w-288 h-66 z-20 border-b-1 border-l-1 border-r-1 border-product-price flex flex-col justify-center text-center bg-product-price text-dark-grey text-23 leading-25">
+                Dark Grey Coat<br>$89.99
+            </div>
+        </a>
+
+        <a href="#" id="ivory-silk-dress" class="w-290 h-316 overflow-hidden shadow-product flex flex-col items-center">
+            <img src="./public/build/images/ivory-dress-mobile.jpg" class="z-15 transform" loading="lazy" alt="ivory-dress-girl">
+            <div class="product-price w-288 h-66 z-20 border-b-1 border-l-1 border-r-1 border-product-price flex flex-col justify-center text-center bg-product-price text-ivory-dress-text text-23 leading-25">
+                Ivory Silk Dress<br>$89.99
+            </div>
+        </a>
+
+        <a href="#" id="blue-jacket" class="w-290 h-316 overflow-hidden shadow-product flex flex-col items-center">
+            <img src="./public/build/images/blue-jacket-man-street-mobile.jpg" class="z-15 transform" loading="lazy" alt="blue-jacket-man-street">
+            <div class="product-price w-288 h-66 z-20 border-b-1 border-l-1 border-r-1 border-product-price flex flex-col justify-center text-center bg-product-price text-blue-jacket-text text-23 leading-25">
+                Blue Jacket<br>$89.99
+            </div>
+        </a>
+
+        <a href="#" id="blue-jean-jacket" class="w-290 h-316 overflow-hidden shadow-product flex flex-col items-center">
+            <img src="./public/build/images/blue-jeans-jacket-man-mobile.jpg" class="z-15 transform" loading="lazy" alt="blue-jeans-jacket-man">
+            <div class="product-price w-288 h-66 z-20 border-b-1 border-l-1 border-r-1 border-product-price flex flex-col justify-center text-center bg-product-price text-blue-jacket-text text-23 leading-25">
+                Blue Jean Jacket<br>$39.99
+            </div>
+        </a>
+
+
+
+    </div>
+
+    </section>
 
 
     <script src="./app.js"></script>
