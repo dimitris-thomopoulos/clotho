@@ -91,6 +91,7 @@ module.exports = {
       '74': '74px',
       '75': '75px',
       '76': '76px',
+      '77': '77px',
       '79': '79px',
       '80': '80px',
       '85': '85px',
@@ -184,6 +185,9 @@ module.exports = {
       '1920': '1920px',
       '2573': '2573px',
       '2873': '2873px',
+      '5657': '5657px',
+      '5883': '5883px',
+      '5961': '5961px',
       '7182': '7182px',
       '2.72': '2.72%',
       '2.867': '2.867%',
@@ -689,7 +693,7 @@ module.exports = {
         'blue-jean-jacket': '#00485E',
         'ivory-dress': '#594641',
         'orange-sweatshirt': '#734900',
-        'dark-blue-coat': '#1C2034',
+        'dark-blue-jacket': '#1C2034',
         'white-pink-offshoulder': '#7D524B',
         'exotic-highneck': '#A02721',
         'mustard-tshirt': '#896000',
@@ -713,7 +717,7 @@ module.exports = {
         'dark-grey': '#1F1918',
         'ivory-dress-text': '#594641',
         'blue-jacket-text': '#00485E',
-        
+        'see-more-products-color': 'rgba(0, 0, 0, 0.05)',
       },
 
       backgroundColor: theme => ({

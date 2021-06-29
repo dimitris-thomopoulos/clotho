@@ -837,8 +837,6 @@ for (let ii=0; ii<products.length; ii++) {
     products[ii].addEventListener('mouseenter', () => {
         productsPrices[ii].classList.toggle('bg-product-price');
         productsPrices[ii].classList.toggle('bg-white');
-        productsPrices[ii].classList.toggle('border-white');
-
         productsPrices[ii].style.transition = ('all 0.2s ease-in-out');
 
 
@@ -849,8 +847,6 @@ for (let ii=0; ii<products.length; ii++) {
     products[ii].addEventListener('mouseleave', () => {
         productsPrices[ii].classList.toggle('bg-white');
         productsPrices[ii].classList.toggle('bg-product-price');
-        productsPrices[ii].classList.toggle('border-white');
-
         productsPrices[ii].style.transition = ('all 0.2s ease-in-out');
 
 
@@ -858,3 +854,33 @@ for (let ii=0; ii<products.length; ii++) {
         productsImages[ii].style.transition = ('all 0.2s ease-in-out');
     });
 }
+
+
+// SEE MORE BUTTON:
+
+const seeMoreProducts = document.querySelector('#see-more-products');
+const seeMoreProductsLink = document.querySelector('#see-more-products a');
+const seasonArrivalsProducts = document.querySelector('#season-arrivals-products');
+let isSeeMoreClicked = false;
+
+seeMoreProducts.addEventListener('click', () => {
+
+    if (screen.width <= 420 && !(isSeeMoreClicked) ) {
+        seasonArrivalsProducts.classList.remove('h-2573');
+        seasonArrivalsProducts.classList.add('h-5961');
+
+        document.querySelector('#products').classList.remove('h-2573');
+        document.querySelector('#products').classList.add('h-5657');
+        
+        for (let n = 7; n < products.length; n++) {
+            products[n].classList.remove('hidden');
+        }
+
+        isSeeMoreClicked = true;
+    }
+
+    if (isSeeMoreClicked) {
+        seeMoreProductsLink.href = "#";
+    }
+
+})
