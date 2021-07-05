@@ -538,7 +538,7 @@ for (let i=0, len=areaOutsideAccessories.length; i<len; i++) {
 
 // default setting (when the page loads for the first time):
 
-if (screen.width <= 420) {
+if (window.innerWidth <= 639) {
 
     window.mobileArrow = setInterval ( () => {
         arrowScrollMobile.style.transform = 'translateY(10px)';
@@ -573,7 +573,7 @@ if (screen.width <= 420) {
 
 // Event listener that toggles the interval whenever the screen resizes to more than 420px:
 
-let widthMatch = window.matchMedia("(max-width: 420px)");
+let widthMatch = window.matchMedia("(max-width: 639px)");
 
 // mm in the function arg is the matchMedia object, passed back into the function
 
@@ -832,9 +832,18 @@ const products = [...document.querySelectorAll('#products a')];
 const productsImages = [...document.querySelectorAll('#products a img')];
 const productsPrices = [...document.querySelectorAll('.product-price')];
 
+
 for (let ii=0; ii<products.length; ii++) {
     
     products[ii].addEventListener('mouseenter', () => {
+        
+        // Box shadow animation
+        
+
+
+
+        // box shadow animation end
+        
         productsPrices[ii].classList.toggle('bg-product-price');
         productsPrices[ii].classList.toggle('bg-white');
         productsPrices[ii].style.transition = ('all 0.2s ease-in-out');
@@ -845,6 +854,13 @@ for (let ii=0; ii<products.length; ii++) {
     });
 
     products[ii].addEventListener('mouseleave', () => {
+
+        // Box shadow animation
+            
+
+
+        // box shadow animation end
+
         productsPrices[ii].classList.toggle('bg-white');
         productsPrices[ii].classList.toggle('bg-product-price');
         productsPrices[ii].style.transition = ('all 0.2s ease-in-out');
@@ -865,7 +881,7 @@ let isSeeMoreClicked = false;
 
 seeMoreProducts.addEventListener('click', () => {
 
-    if (screen.width <= 420 && !(isSeeMoreClicked) ) {
+    if (window.innerWidth <= 420 && !(isSeeMoreClicked) ) {
         seasonArrivalsProducts.classList.remove('h-2573');
         seasonArrivalsProducts.classList.add('h-5961');
 
@@ -876,11 +892,11 @@ seeMoreProducts.addEventListener('click', () => {
             products[n].classList.remove('hidden');
         }
 
-        isSeeMoreClicked = true;
     }
-
+    
     if (isSeeMoreClicked) {
         seeMoreProductsLink.href = "#";
     }
-
+    
+    isSeeMoreClicked = true;
 })

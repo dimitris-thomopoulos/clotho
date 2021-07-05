@@ -122,6 +122,7 @@ module.exports = {
       '245': '245px',
       '250': '250px',
       '255': '255px',
+      '260': '260px',
       '270': '270px',
       '275': '275px',
       '280': '280px',
@@ -219,6 +220,7 @@ module.exports = {
       '75/100': '75%',
       '79.26': '79.26%',
       '80/100': '80%',
+      '83.1': '83.1%',
       '83.347': '83.347%',
       '85/100': '85%',
       '875/100': '87.5%',
@@ -234,7 +236,8 @@ module.exports = {
     },
 
     screens: {
-      'xs': '320px',
+      '2xs': '320px',
+      'xs': '420px',
       'sm': '640px',
       'md': '960px',
       'lg': '1280px',
@@ -261,6 +264,7 @@ module.exports = {
       36: '36px',
       38: '38px',
       40: '40px',
+      47: '47px',
       48: '48px',
       64: '64px',
       71: '71px',
@@ -297,6 +301,13 @@ module.exports = {
     boxShadow: {
       DEFAULT: '0 0 40px rgba(0, 0, 0, 0.25);',
       product: '0px 4px 18px 3px rgba(0, 0, 0, 0.27);',
+      product_hover: '0px 4px 18px 3px rgba(0, 0, 0, 0.5);',
+    },
+
+    minWidth: {
+      '350': '350px',
+      '18/100': '18%',
+      '83.1/100': '83.1%',
     },
 
     maxWidth: {
@@ -701,6 +712,7 @@ module.exports = {
       },
       
       opacity: {
+        '6': '0.6',
         '13': '0.13',
       },
 
@@ -718,6 +730,8 @@ module.exports = {
         'ivory-dress-text': '#594641',
         'blue-jacket-text': '#00485E',
         'see-more-products-color': 'rgba(0, 0, 0, 0.05)',
+        'active-category-index': '#FFFFFF',
+        'inactive-category-index': '#4B4B4B',
       },
 
       backgroundColor: theme => ({
@@ -740,7 +754,96 @@ module.exports = {
         'fall-season-man-mobile': "url('./images/fall-season-man-mobile.jpg')",
         'clotho-pattern-mobile': "url('./images/clotho-pattern-bg-mobile.png')",     
         'clotho-pattern-desktop': "url('./images/clotho-pattern-bg.png')",     
-        'footer-image': "url('./images/footer-bg.jpg')",     
+        'footer-image': "url('./images/footer-bg.jpg')",   
+        
+
+
+
+        // categories images for mobile
+        
+        'category0-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category0-mobile-hover': "url('./images/.jpg')",
+        
+        'category1-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category1-mobile-hover': "url('./images/.jpg')",
+        
+        'category2-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category2-mobile-hover': "url('./images/.jpg')",
+        
+        'category3-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category3-mobile-hover': "url('./images/.jpg')",
+        
+        'category4-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category4-mobile-hover': "url('./images/.jpg')",
+        
+        'category5-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category5-mobile-hover': "url('./images/.jpg')",
+        
+        'category6-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/leather-jacket-man-mobile.jpg')",
+        'category6-mobile-hover': "url('./images/.jpg')",
+        
+        'category7-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category7-mobile-hover': "url('./images/.jpg')",
+        
+        'category8-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category8-mobile-hover': "url('./images/.jpg')",
+        
+        'category8-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category8-mobile-hover': "url('./images/.jpg')",
+        
+        'category9-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category9-mobile-hover': "url('./images/.jpg')",
+        
+        'category11-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category11-mobile-hover': "url('./images/.jpg')",
+        
+        'category12-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category12-mobile-hover': "url('./images/.jpg')",
+
+
+
+
+        // categories images for desktop
+
+        'category0': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category0-hover': "url('./images/.jpg')",
+        
+        'category1': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category1-hover': "url('./images/.jpg')",
+        
+        'category2': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category2-hover': "url('./images/.jpg')",
+        
+        'category3': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category3-hover': "url('./images/.jpg')",
+        
+        'category4': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category4-hover': "url('./images/.jpg')",
+        
+        'category5': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category5-hover': "url('./images/.jpg')",
+        
+        'category6': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/leather-jacket-man.jpg')",
+        'category6-hover': "url('./images/.jpg')",
+        
+        'category7': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category7-hover': "url('./images/.jpg')",
+        
+        'category8': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category8-hover': "url('./images/.jpg')",
+        
+        'category9': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category9-hover': "url('./images/.jpg')",
+        
+        'category10': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category10-hover': "url('./images/.jpg')",
+        
+        'category11': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category11-hover': "url('./images/.jpg')",
+        
+        'category12': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
+        'category12-hover': "url('./images/.jpg')",
+
        }),
 
       backgroundSize: {

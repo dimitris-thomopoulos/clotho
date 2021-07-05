@@ -73,7 +73,11 @@ h1,h2,h3,h4,h5,h6 {
   line-height: normal;
 }
 
-h1, h2, button, img, svg {
+button a {
+  display: block;
+}
+
+h1, button, img, svg {
   user-select: none;
 }
 
@@ -471,6 +475,47 @@ header h1.menu-active {
 
 
 
+/* SEASON ARRIVALS PRODUCTS PAGE */
+
+
+/* box shadow hover transition */
+
+#products a {
+  position: relative;
+  box-shadow: 0px 4px 18px 3px rgba(0, 0, 0, 0.27);
+  transition: all 0.2s ease-in-out;
+}
+
+#products a::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: -1;
+  width: 100%;
+  height: 100%;
+  box-shadow: 0px 4px 18px 6px rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: all 0.2s ease-in-out;
+}
+
+#products a:hover::after {
+  opacity: 1;
+  transition: all 0.2s ease-in-out;
+}
+
+
+
+
+
+
+
+
+/* CATEGORIES SIDE SCROLL */
+
+#categories-slider::-webkit-scrollbar {
+  display: none;
+}
 
 
 
