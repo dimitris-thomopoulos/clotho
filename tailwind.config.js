@@ -761,88 +761,88 @@ module.exports = {
 
         // categories images for mobile
         
-        'category0-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category0-mobile-hover': "url('./images/.jpg')",
+        'category0-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/t-shirt-girl-mobile.jpg')",
+        'category0-mobile-hover': "url('./images/t-shirt-girl-mobile.jpg')",
         
-        'category1-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category1-mobile-hover': "url('./images/.jpg')",
+        'category1-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/coat-man-wall-mobile.jpg')",
+        'category1-mobile-hover': "url('./images/coat-man-wall-mobile.jpg')",
         
-        'category2-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category2-mobile-hover': "url('./images/.jpg')",
+        'category2-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/hat-girl-mobile.jpg')",
+        'category2-mobile-hover': "url('./images/hat-girl-mobile.jpg')",
         
-        'category3-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category3-mobile-hover': "url('./images/.jpg')",
+        'category3-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/sunglasses-girl-mobile.jpg')",
+        'category3-mobile-hover': "url('./images/sunglasses-girl-mobile.jpg')",
         
-        'category4-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category4-mobile-hover': "url('./images/.jpg')",
+        'category4-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/hoodie-girl-outdoors-mobile.jpg')",
+        'category4-mobile-hover': "url('./images/hoodie-girl-outdoors-mobile.jpg')",
         
-        'category5-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category5-mobile-hover': "url('./images/.jpg')",
+        'category5-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/jeans-man-street-mobile.jpg')",
+        'category5-mobile-hover': "url('./images/jeans-man-street-mobile.jpg')",
         
         'category6-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/leather-jacket-man-mobile.jpg')",
-        'category6-mobile-hover': "url('./images/.jpg')",
+        'category6-mobile-hover': "url('./images/leather-jacket-man-mobile.jpg')",
         
-        'category7-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category7-mobile-hover': "url('./images/.jpg')",
+        'category7-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/pants-girl-bw-mobile.jpg')",
+        'category7-mobile-hover': "url('./images/pants-girl-bw-mobile.jpg')",
         
-        'category8-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category8-mobile-hover': "url('./images/.jpg')",
+        'category8-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/dress-girl-bath-mobile.jpg')",
+        'category8-mobile-hover': "url('./images/dress-girl-bath-mobile.jpg')",
         
-        'category8-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category8-mobile-hover': "url('./images/.jpg')",
+        'category9-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/glasses-man-mobile.jpg')",
+        'category9-mobile-hover': "url('./images/glasses-man-mobile.jpg')",
         
-        'category9-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category9-mobile-hover': "url('./images/.jpg')",
+        'category10-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/earrings-category-girl-mobile.jpg')",
+        'category10-mobile-hover': "url('./images/earrings-category-girl-mobile.jpg')",
         
-        'category11-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category11-mobile-hover': "url('./images/.jpg')",
+        'category11-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/watch-man-mobile.jpg')",
+        'category11-mobile-hover': "url('./images/watch-man-mobile.jpg')",
         
-        'category12-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category12-mobile-hover': "url('./images/.jpg')",
+        'category12-mobile': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/bag-girl-mobile.jpg')",
+        'category12-mobile-hover': "url('./images/bag-girl-mobile.jpg')",
 
 
 
 
         // categories images for desktop
 
-        'category0': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category0-hover': "url('./images/.jpg')",
+        'category0': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/t-shirt-girl.jpg')",
+        'category0-hover': "url('./images/t-shirt-girl.jpg')",
         
-        'category1': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category1-hover': "url('./images/.jpg')",
+        'category1': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/coat-man-wall.jpg')",
+        'category1-hover': "url('./images/coat-man-wall.jpg')",
         
-        'category2': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category2-hover': "url('./images/.jpg')",
+        'category2': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/hat-girl.jpg')",
+        'category2-hover': "url('./images/hat-girl.jpg')",
         
-        'category3': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category3-hover': "url('./images/.jpg')",
+        'category3': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/sunglasses-girl.jpg')",
+        'category3-hover': "url('./images/sunglasses-girl.jpg')",
         
-        'category4': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category4-hover': "url('./images/.jpg')",
+        'category4': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/hoodie-girl-outdoors.jpg')",
+        'category4-hover': "url('./images/hoodie-girl-outdoors.jpg')",
         
-        'category5': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category5-hover': "url('./images/.jpg')",
+        'category5': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/jeans-man-street.jpg')",
+        'category5-hover': "url('./images/jeans-man-street.jpg')",
         
         'category6': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/leather-jacket-man.jpg')",
-        'category6-hover': "url('./images/.jpg')",
+        'category6-hover': "url('./images/leather-jacket-man.jpg')",
         
-        'category7': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category7-hover': "url('./images/.jpg')",
+        'category7': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/pants-girl-bw.jpg')",
+        'category7-hover': "url('./images/pants-girl-bw.jpg')",
         
-        'category8': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category8-hover': "url('./images/.jpg')",
+        'category8': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/dress-girl-bath.jpg')",
+        'category8-hover': "url('./images/dress-girl-bath.jpg')",
         
-        'category9': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category9-hover': "url('./images/.jpg')",
+        'category9': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/glasses-man.jpg')",
+        'category9-hover': "url('./images/glasses-man.jpg')",
         
-        'category10': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category10-hover': "url('./images/.jpg')",
+        'category10': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/earrings-category-girl.jpg')",
+        'category10-hover': "url('./images/earrings-category-girl.jpg')",
         
-        'category11': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category11-hover': "url('./images/.jpg')",
+        'category11': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/watch-man.jpg')",
+        'category11-hover': "url('./images/watch-man.jpg')",
         
-        'category12': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/.jpg')",
-        'category12-hover': "url('./images/.jpg')",
+        'category12': "linear-gradient(rgba(31, 31, 31, 0.4), rgba(31, 31, 31, 0.4)), url('./images/bag-girl.jpg')",
+        'category12-hover': "url('./images/bag-girl.jpg')",
 
        }),
 
