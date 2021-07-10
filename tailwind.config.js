@@ -13,6 +13,7 @@ module.exports = {
       '0': '0px',
       '1': '1px',
       '2': '2px',
+      '2.5': '2.5px',
       '3': '3px',
       '4': '4px',
       '5': '5px',
@@ -269,6 +270,7 @@ module.exports = {
       64: '64px',
       71: '71px',
       72: '72px',
+      90: '90px',
     },
 
     letterSpacing: {
@@ -306,8 +308,20 @@ module.exports = {
 
     minWidth: {
       '350': '350px',
+      '10/100': '10%',
+      '15/100': '15%',
+      '17.8125': '17.8125%',
       '18/100': '18%',
-      '83.1/100': '83.1%',
+      '20/100': '20%',
+      '30/100': '30%',
+      '40/100': '40%',
+      '50/100': '50%',
+      '60/100': '60%',
+      '70/100': '70%',
+      '80/100': '80%',
+      '83.1': '83.1%',
+      '90/100': '90%',
+      'full': '100%',
     },
 
     maxWidth: {
@@ -735,7 +749,7 @@ module.exports = {
       },
 
       backgroundColor: theme => ({
-        'product-price': 'rgba(196, 196, 196, 0.33);'
+        'product-price': 'rgba(196, 196, 196, 0.33);',
       }),
 
       backgroundImage: theme => ({                  //How To Use: bg-{key}
@@ -755,6 +769,9 @@ module.exports = {
         'clotho-pattern-mobile': "url('./images/clotho-pattern-bg-mobile.png')",     
         'clotho-pattern-desktop': "url('./images/clotho-pattern-bg.png')",     
         'footer-image': "url('./images/footer-bg.jpg')",   
+
+        'left-slider-linear': 'linear-gradient(to right, black, transparent);',
+        'right-slider-linear': 'linear-gradient(to left, black, transparent);',
         
 
 
@@ -888,6 +905,13 @@ module.exports = {
         '1em': '1em',
         'inherit': 'inherit',
       },
+
+      cursor: {
+        auto: 'auto',
+        default: 'default',
+        pointer: 'pointer',
+        grab: 'grab',
+      }
 
     },
   },
