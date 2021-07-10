@@ -139,10 +139,30 @@ const sliderDarken = document.querySelector('.sliderDarken');
 const arrowScrollMobile = document.querySelector('.arrow-scroll-sm');
 const arrowScrollDesktop = document.querySelector('.arrow-scroll-lg');
 
+const sections = [...document.querySelectorAll('section')];
+const footer = document.querySelector('footer');
+const htmlElement = document.documentElement;
+
 let isDropdownOpened = false;
 
 burgerButton.addEventListener('click', () => {
 
+    // Hide the rest of the page sections and the footer
+    // to disable scrolling while in the mobile menu:
+
+
+    for (let i=0; i<sections.length; i++) {
+        
+        sections[i].classList.toggle('hidden');       
+    }
+
+    // footer.classList.toggle('hidden');
+
+    // Also, change the HTML root element's background color to black:
+
+    htmlElement.classList.toggle('bg-black');
+
+    
     // Animate the 'X' button:
     topLine.classList.toggle('menu-active');
     topLineWhite.classList.toggle('menu-active');
