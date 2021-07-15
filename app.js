@@ -920,3 +920,37 @@ seeMoreProducts.addEventListener('click', () => {
     
     isSeeMoreClicked = true;
 })
+
+
+
+
+
+
+
+// CATEGORIES PAGE: 
+
+const leftSlider = document.getElementById('left-slider');
+const rightSlider = document.getElementById('right-slider');
+
+const categories = [...document.querySelectorAll('#categories-slider a')];
+const firstCategory = categories[0];
+
+let categoryMargin = '(0px)';
+
+rightSlider.addEventListener('click', () => {
+    firstCategory.style.marginLeft = `calc(${categoryMargin} ` + '+ (-100vw + 250px))';
+    categoryMargin += ' + (-100vw + 250px)';
+
+    firstCategory.style.transition = 'all .4s ease-out';
+})
+
+leftSlider.addEventListener('click', () => {
+
+    if (!(firstCategory.style.marginLeft == false)) {
+    firstCategory.style.marginLeft = `calc(${categoryMargin} ` + '- (-100vw + 250px))';
+    categoryMargin += ' - (-100vw + 250px)';
+
+    firstCategory.style.transition = 'all .4s ease-out';
+
+    }
+})

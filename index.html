@@ -12,11 +12,11 @@
     
     <div id="header-fadein" class="w-full h-full absolute top-0 z-100 bg-white"></div>
     
-    <header class="main-bg relative  w-full h-900 flex flex-col items-center bg-cover bg-no-repeat bg-center">
+    <header class="main-bg relative  w-full h-screen flex flex-col items-center bg-cover bg-no-repeat bg-center">
         
-            <div class="slider w-full h-900 overflow-hidden">
+            <div class="slider w-full h-screen overflow-hidden">
                 
-                <div class="slides w-500/100 h-900 flex">
+                <div class="slides w-500/100 h-screen flex">
                 <input type="radio" name="radio-btn" id="radio1" class="hidden">
                 <input type="radio" name="radio-btn" id="radio2" class="hidden">
                 <input type="radio" name="radio-btn" id="radio3" class="hidden">
@@ -391,14 +391,14 @@
             </a>
 
 
-            <div class="z-20 hidden lg:flex justify-center absolute left-0 w-55 lg:w-70 h-full bg-left-slider-linear">
-                <img src="./public/build/images/arrow-slides.svg" alt="" class="cursor-pointer transform scale-50 rotate-180">                
-            </div>
+        <div id="left-slider" class="z-20 hidden lg:flex justify-center absolute left-0 w-55 lg:w-70 h-full bg-left-slider-linear cursor-pointer">
+            <img src="./public/build/images/arrow-slides.svg" alt="" class="cursor-pointer transform scale-50 rotate-180">                
+        </div>
 
 
-            <div class="z-20 hidden lg:flex justify-center absolute right-0 w-55 lg:w-70 h-full bg-right-slider-linear">
-                <img src="./public/build/images/arrow-slides.svg" alt="" class="cursor-pointer transform scale-50">                    
-            </div>
+        <div id="right-slider" class="z-20 hidden lg:flex justify-center absolute right-0 w-55 lg:w-70 h-full bg-right-slider-linear cursor-pointer">
+            <img src="./public/build/images/arrow-slides.svg" alt="" class="cursor-pointer transform scale-50">                    
+        </div>
 
 
 
