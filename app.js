@@ -134,21 +134,17 @@ var sliderInterval = setInterval(imageSlider, 5000);
 // Dropdown Menu for mobile:
 
 const burgerButton = document.querySelector('.burger');
-
-const topLine = document.querySelector('.topLine');
-const topLineWhite = document.querySelector('.topLine span:nth-of-type(2)');
-const topLineTransp = document.querySelector('.topLine span:nth-of-type(1)');
-
-const bottomLine = document.querySelector('.bottomLine');
-const bottomLineWhite = document.querySelector('.bottomLine span:nth-of-type(2)');
-const bottomLineTransp = document.querySelector('.bottomLine span:nth-of-type(1)');
 const linesContainer = document.querySelector('.burger-lines');
+const topLine = document.querySelector('.burger-lines span:nth-of-type(1)');
+const bottomLine = document.querySelector('.burger-lines span:nth-of-type(2)');
 
 const headerButton = document.querySelector('#header-btn');
 const clothoTitle = document.querySelector('header h1');
 const manualIndices = document.querySelector('.navigation-manual');
 const autoIndices = document.querySelector('.navigation-auto');
 const sliderDarken = document.querySelector('.sliderDarken');
+const sliderImages = [...document.querySelectorAll('.slides .slide')];
+
 
 const arrowScrollMobile = document.querySelector('.arrow-scroll-sm');
 const arrowScrollDesktop = document.querySelector('.arrow-scroll-lg');
@@ -178,16 +174,33 @@ burgerButton.addEventListener('click', () => {
 
     
     // Animate the 'X' button:
-    topLine.classList.toggle('menu-active');
-    topLineWhite.classList.toggle('menu-active');
-    topLineTransp.classList.toggle('menu-active');
 
-    bottomLine.classList.toggle('menu-active');
-    bottomLineWhite.classList.toggle('menu-active');
-    bottomLineTransp.classList.toggle('menu-active');
+    topLine.classList.toggle('rotate-0');
+    topLine.classList.toggle('translate-y-0');
+
+    topLine.classList.toggle('rotate-45');
+    topLine.classList.toggle('translate-y-10.5');
+
+
+    bottomLine.classList.toggle('rotate-0');
+    bottomLine.classList.toggle('translate-y-0');
+
+    bottomLine.classList.toggle('-rotate-45');
+    bottomLine.classList.toggle('-translate-y-10.5');
+
+
+
 
     // Show the actual dropdown menu:
     sliderDarken.classList.toggle('menu-active');
+
+
+    // Blur the background images slider:
+
+    sliderImages.forEach(sliderImage => {
+        sliderImage.classList.toggle('filter');
+        sliderImage.classList.toggle('blur-sm');
+    });
 
 
     // Hide the elements of the header in the background:
@@ -216,19 +229,16 @@ burgerButton.addEventListener('click', () => {
     // Close all dropdown extend menus:
     if(isManOpened) {
         Object.keys(notManLinks).forEach(key => {
-            notManLinks[key].classList.toggle('text-38');
             
-            setTimeout(() => {
-                notManLinks[key].classList.toggle('absolute');
-            },200)
+            notManLinks[key].classList.toggle('hidden');
         }) 
         
         Object.keys(manLinks).forEach(key => {
-            manLinks[key].classList.toggle('text-24');
-            manLinks[key].classList.toggle('opacity-100');
+            manLinks[key].classList.toggle('hidden');
         })
         
         manLinks[0].classList.toggle('mb-10');
+        manLinks[0].classList.toggle('mt-10');
         manLinks[1].classList.toggle('my-10');
         manLinks[2].classList.toggle('my-10');
         manLinks[3].classList.toggle('my-10');
@@ -238,19 +248,16 @@ burgerButton.addEventListener('click', () => {
     } else if (isWomanOpened) {
 
         Object.keys(notWomanLinks).forEach(key => {
-            notWomanLinks[key].classList.toggle('text-38');
             
-            setTimeout(() => {
-                notWomanLinks[key].classList.toggle('absolute');
-            },200)
+            notWomanLinks[key].classList.toggle('hidden');
         }) 
         
         Object.keys(womanLinks).forEach(key => {
-            womanLinks[key].classList.toggle('text-24');
-            womanLinks[key].classList.toggle('opacity-100');
+            womanLinks[key].classList.toggle('hidden');
         })
         
         womanLinks[0].classList.toggle('mb-10');
+        womanLinks[0].classList.toggle('mt-10');
         womanLinks[1].classList.toggle('my-10');
         womanLinks[2].classList.toggle('my-10');
         womanLinks[3].classList.toggle('my-10');
@@ -260,19 +267,16 @@ burgerButton.addEventListener('click', () => {
     } else if (isAccessoriesOpened) {
 
         Object.keys(notAccessoriesLinks).forEach(key => {
-            notAccessoriesLinks[key].classList.toggle('text-38');
             
-            setTimeout(() => {
-                notAccessoriesLinks[key].classList.toggle('absolute');
-            },200)
+            notAccessoriesLinks[key].classList.toggle('hidden');
         }) 
         
         Object.keys(accessoriesLinks).forEach(key => {
-            accessoriesLinks[key].classList.toggle('text-24');
-            accessoriesLinks[key].classList.toggle('opacity-100');
+            accessoriesLinks[key].classList.toggle('hidden');
         })
         
         accessoriesLinks[0].classList.toggle('mb-10');
+        accessoriesLinks[0].classList.toggle('mt-10');
         accessoriesLinks[1].classList.toggle('my-10');
         accessoriesLinks[2].classList.toggle('my-10');
         accessoriesLinks[3].classList.toggle('my-10');
@@ -322,6 +326,8 @@ let isManOpened = false;
 let isWomanOpened = false;
 let isAccessoriesOpened = false;
 
+
+
 // Before adjusting the actions for every category selection, we first configure the back arrow icon:
 
 extendMenus.forEach((menu) => {                         // Display the back-arrow icon when a category is selected
@@ -346,19 +352,18 @@ backArrow.addEventListener('click', () => {
     
     if(isManOpened) {
         Object.keys(notManLinks).forEach(key => {
-            notManLinks[key].classList.toggle('text-38');
             
-            setTimeout(() => {
-                notManLinks[key].classList.toggle('absolute');
-            },150)
+            
+            notManLinks[key].classList.toggle('hidden');
         }) 
         
         Object.keys(manLinks).forEach(key => {
-            manLinks[key].classList.toggle('text-24');
-            manLinks[key].classList.toggle('opacity-100');
+            
+            manLinks[key].classList.toggle('hidden');
         })
         
         manLinks[0].classList.toggle('mb-10');
+        manLinks[0].classList.toggle('mt-10');
         manLinks[1].classList.toggle('my-10');
         manLinks[2].classList.toggle('my-10');
         manLinks[3].classList.toggle('my-10');
@@ -368,19 +373,18 @@ backArrow.addEventListener('click', () => {
     } else if (isWomanOpened) {
 
         Object.keys(notWomanLinks).forEach(key => {
-            notWomanLinks[key].classList.toggle('text-38');
+            
 
-            setTimeout(() => {
-                notWomanLinks[key].classList.toggle('absolute');
-            },150)
+            notWomanLinks[key].classList.toggle('hidden');
         }) 
         
         Object.keys(womanLinks).forEach(key => {
-            womanLinks[key].classList.toggle('text-24');
-            womanLinks[key].classList.toggle('opacity-100');
+            
+            womanLinks[key].classList.toggle('hidden');
         })
         
         womanLinks[0].classList.toggle('mb-10');
+        womanLinks[0].classList.toggle('mt-10');
         womanLinks[1].classList.toggle('my-10');
         womanLinks[2].classList.toggle('my-10');
         womanLinks[3].classList.toggle('my-10');
@@ -390,19 +394,18 @@ backArrow.addEventListener('click', () => {
     } else if (isAccessoriesOpened) {
 
         Object.keys(notAccessoriesLinks).forEach(key => {
-            notAccessoriesLinks[key].classList.toggle('text-38');
             
-            setTimeout(() => {
-                notAccessoriesLinks[key].classList.toggle('absolute');
-            },150)
+            
+            notAccessoriesLinks[key].classList.toggle('hidden');
         }) 
         
         Object.keys(accessoriesLinks).forEach(key => {
-            accessoriesLinks[key].classList.toggle('text-24');
-            accessoriesLinks[key].classList.toggle('opacity-100');
+            
+            accessoriesLinks[key].classList.toggle('hidden');
         })
         
         accessoriesLinks[0].classList.toggle('mb-10');
+        accessoriesLinks[0].classList.toggle('mt-10');
         accessoriesLinks[1].classList.toggle('my-10');
         accessoriesLinks[2].classList.toggle('my-10');
         accessoriesLinks[3].classList.toggle('my-10');
@@ -443,16 +446,11 @@ manDropdown.addEventListener('click', () => {
     manDropdown.classList.toggle('link-hover-effect');
 
     Object.keys(notManLinks).forEach(key => {
-        notManLinks[key].classList.toggle('text-38');
-
-        setTimeout(() => {
-            notManLinks[key].classList.toggle('absolute');
-        },200)
+        notManLinks[key].classList.toggle('hidden');
     }) 
 
     Object.keys(manLinks).forEach(key => {
-        manLinks[key].classList.toggle('text-24');
-        manLinks[key].classList.toggle('opacity-100');
+        manLinks[key].classList.toggle('hidden');
     })
 
     manLinks[0].classList.toggle('mb-10');
@@ -485,16 +483,12 @@ womanDropdown.addEventListener('click', () => {
     womanDropdown.classList.toggle('link-hover-effect');
 
     Object.keys(notWomanLinks).forEach(key => {
-        notWomanLinks[key].classList.toggle('text-38');
 
-        setTimeout(() => {
-            notWomanLinks[key].classList.toggle('absolute');
-        },200)
+        notWomanLinks[key].classList.toggle('hidden');
     }) 
 
     Object.keys(womanLinks).forEach(key => {
-        womanLinks[key].classList.toggle('text-24');
-        womanLinks[key].classList.toggle('opacity-100');
+        womanLinks[key].classList.toggle('hidden');
     })
 
     womanLinks[0].classList.toggle('mb-10');
@@ -527,16 +521,12 @@ accessoriesDropdown.addEventListener('click', () => {
     accessoriesDropdown.classList.toggle('link-hover-effect');
 
     Object.keys(notAccessoriesLinks).forEach(key => {
-        notAccessoriesLinks[key].classList.toggle('text-38');
 
-        setTimeout(() => {
-            notAccessoriesLinks[key].classList.toggle('absolute');
-        },200)
+        notAccessoriesLinks[key].classList.toggle('hidden');
     }) 
 
     Object.keys(accessoriesLinks).forEach(key => {
-        accessoriesLinks[key].classList.toggle('text-24');
-        accessoriesLinks[key].classList.toggle('opacity-100');
+        accessoriesLinks[key].classList.toggle('hidden');
     })
 
     accessoriesLinks[0].classList.toggle('mb-10');
@@ -677,9 +667,14 @@ const seasonArrivalsPriceTags = [...document.querySelectorAll('.price-tag')];
 
 var seasonArrivalsFadeIn; 
 
+let isSeasonArrivalsIntroSeen = false;
+
 var scroll = function(callback) { 
-    seasonArrivalsFadeIn = window.setInterval(callback, 1000/60)
+    if (!(isSeasonArrivalsIntroSeen)) {
+    seasonArrivalsFadeIn = window.setInterval(callback, 1000/60);
+    }
 };
+
 
 
 function isElementInViewport(el) {
@@ -704,23 +699,41 @@ function isElementInViewport(el) {
   }
 
 
+  seasonArrivalsTitleHr.style.transform = `translateX(${seasonArrivalsTitleH2.clientWidth/2}px)`;
+
 
 function h2ScrollAnimation() {
     if (isElementInViewport(seasonArrivalsTitleH2)) {
-        seasonArrivalsTitleH2.classList.remove('-left-420');
-        seasonArrivalsTitleH2.classList.add('left-0');
-        seasonArrivalsTitleH2.style.transition = ('all 0.7s ease-out');
+        seasonArrivalsTitleH2.classList.remove('opacity-0');
+        seasonArrivalsTitleH2.classList.add('opacity-100');
         
-        seasonArrivalsTitleHr.classList.remove('opacity-0');
-        seasonArrivalsTitleHr.style.transition = ('opacity 0.7s ease-out');
+        seasonArrivalsTitleH2.classList.remove('translate-y-10');
+        seasonArrivalsTitleH2.classList.add('translate-y-0');
+
+        seasonArrivalsTitleH2.style.transition = ('all 1s ease-out');
+        
+        
+        // HR automatic width calculator:
+        seasonArrivalsTitleHr.width = `${seasonArrivalsTitleH2.clientWidth - 15}`;
+        
+        seasonArrivalsTitleHr.style.transform = 'translateX(-5px)';
+        
+        seasonArrivalsTitleHr.classList.remove('w-0');
+        
+        seasonArrivalsTitleHr.style.transition = ('all 1s ease-out');
     }
 }
 
 function h3ScrollAnimation() {
     if (isElementInViewport(seasonArrivalsTitleH3)) {
-        seasonArrivalsTitleH3.classList.remove('-mr-106');
-        seasonArrivalsTitleH3.classList.add('mr-10');
-        seasonArrivalsTitleH3.style.transition = ('all 0.7s ease-out');
+        seasonArrivalsTitleH3.classList.remove('-translate-y-10');
+        seasonArrivalsTitleH3.classList.add('translate-y-0');
+
+        seasonArrivalsTitleH3.classList.remove('opacity-0');
+        seasonArrivalsTitleH3.classList.add('opacity-100');
+
+        
+        seasonArrivalsTitleH3.style.transition = ('all 1s ease-out');
 
         seasonArrivalsPriceTags.forEach(priceTag => {
             setTimeout( () => {
@@ -732,6 +745,7 @@ function h3ScrollAnimation() {
         seasonArrivalsDesc.classList.remove('opacity-0');
         seasonArrivalsDesc.style.transition = ('opacity 2s ease-in-out');
 
+        isSeasonArrivalsIntroSeen = true;
         clearInterval(seasonArrivalsFadeIn);
     }
 }
@@ -741,9 +755,6 @@ scroll(h3ScrollAnimation);
 
 
 
-
-// HR automatic width calculator:
-seasonArrivalsTitleHr.width = `${seasonArrivalsTitleH2.clientWidth + parseFloat(window.getComputedStyle(seasonArrivalsTitleH2).marginRight)}`;
 
 // Price tags background color flashing interval: 
 

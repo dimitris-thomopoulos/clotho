@@ -69,6 +69,21 @@ img {
     transform: translateZ(0);
 }
 
+/* width */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+  background-color: #35363a;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+  background: #eeeeee;
+}
+
 h1,h2,h3,h4,h5,h6 {
   line-height: normal;
 }
@@ -231,37 +246,6 @@ h1 {
 
 /*  Mobile dropdown menu changes (menu-active class toggle) */
 
-.topLine span:nth-of-type(1).menu-active {
-  width: 30px;
-  transition: width 0.2s ease-in-out;
-}
-
-.topLine span:nth-of-type(2).menu-active {
-  width: 59px;
-  transition: width 0.2s ease-in-out;
-}
-
-.topLine.menu-active {
-  transform: translateX(15px) rotate(45deg);
-  transition: transform 0.2s ease-in-out;
-}
-
-
-
-.bottomLine.menu-active {
-  transform: translateX(15px) rotate(-45deg);
-  transition: transform 0.2s ease-in-out;
-}
-
-.bottomLine span:nth-of-type(1).menu-active {
-  width: 30px;
-  transition: width 0.2s ease-in-out;
-}
-
-.bottomLine span:nth-of-type(2).menu-active {
-  width: 59px;
-  transition: width 0.2s ease-in-out;
-}
 
 
 .sliderDarken.menu-active {
