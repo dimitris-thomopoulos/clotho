@@ -168,7 +168,7 @@ burgerButton.addEventListener('click', () => {
 
     // footer.classList.toggle('hidden');
 
-    // Also, change the HTML root element's background color to black:
+    // Also, change the <html> root element's background color to black:
 
     htmlElement.classList.toggle('bg-black');
 
@@ -195,13 +195,6 @@ burgerButton.addEventListener('click', () => {
     sliderDarken.classList.toggle('menu-active');
 
 
-    // Blur the background images slider:
-
-    sliderImages.forEach(sliderImage => {
-        sliderImage.classList.toggle('filter');
-        sliderImage.classList.toggle('blur-sm');
-    });
-
 
     // Hide the elements of the header in the background:
     headerButton.classList.toggle('menu-active');
@@ -211,7 +204,14 @@ burgerButton.addEventListener('click', () => {
     arrowScrollMobile.classList.toggle('menu-active');
 
     // Hide the back-arrow SVG icon (if it was shown):
-    if (!(backArrow.classList.contains('w-0'))) backArrow.classList.add('w-0');
+    if (backArrow[0].classList.contains('w-75')) {
+
+        backArrow[0].classList.remove('w-75');
+        
+        backArrow[1].classList.add('w-0');
+        backArrow[1].classList.remove('opacity-100');
+    }
+        
 
 
     // Remove the underline of the active category:
@@ -303,12 +303,23 @@ burgerButton.addEventListener('click', () => {
 
 // Dropdown Menu Extend for mobile:
 
+const manLi = document.querySelector('.li-man');
+const womanLi = document.querySelector('.li-woman');
+const accessoriesLi = document.querySelector('.li-accessories');
+
 const manDropdown = document.querySelector('.li-man a');
 const womanDropdown = document.querySelector('.li-woman a');
 const accessoriesDropdown = document.querySelector('.li-accessories a');
 
+const manSubcategory = [...document.querySelectorAll('.li-man-items a + a')];
+const womanSubcategory = [...document.querySelectorAll('.li-woman-items a + a')];
+const accessoriesSubcategory = [...document.querySelectorAll('.li-accessories-items a + a')];
+
+
+
 const extendMenus = [manDropdown, womanDropdown, accessoriesDropdown];
-const backArrow = document.querySelector('.back-arrow');
+const extendMenusLis = [manLi, womanLi, accessoriesLi];
+const backArrow = [...document.querySelectorAll('.back-arrow')];
 
 const areaOutsideMan = document.querySelectorAll('header li:not(.li-man):not(.li-man-items), .burger');
 const areaOutsideWoman = document.querySelectorAll('header li:not(.li-woman):not(.li-woman-items), .burger');
@@ -330,22 +341,21 @@ let isAccessoriesOpened = false;
 
 // Before adjusting the actions for every category selection, we first configure the back arrow icon:
 
-extendMenus.forEach((menu) => {                         // Display the back-arrow icon when a category is selected
-    menu.addEventListener('click', () => {
-        if (backArrow.classList.contains('w-0')) {
-            backArrow.classList.remove('w-0');
-        } else if (!(backArrow.classList.contains('w-0'))) {
-            backArrow.classList.add('w-0');
-        }
+extendMenusLis.forEach((menuLi) => {                         // Display the back-arrow icon when a category is selected (on-row click)
+    menuLi.addEventListener('click', () => {
+        backArrow[0].classList.toggle('w-75');
+        backArrow[1].classList.toggle('w-0');
+        backArrow[1].classList.toggle('opacity-100');
+        
     })
 })
 
 
-backArrow.addEventListener('click', () => {
+backArrow[0].addEventListener('click', () => {
         
-    manDropdown.classList.remove('link-hover-effect');
-    womanDropdown.classList.remove('link-hover-effect');
-    accessoriesDropdown.classList.remove('link-hover-effect');
+    // manSubcategory.classList.remove('link-hover-effect');
+    // womanSubcategory.classList.remove('link-hover-effect');
+    // accessoriesSubcategory.classList.remove('link-hover-effect');
 
 
     // Close the current category's links:
@@ -431,9 +441,12 @@ backArrow.addEventListener('click', () => {
     })
 
     // Animate the disappearing of the arrow icon:
-    if (!(backArrow.classList.contains('w-0'))) {    
-        backArrow.classList.add('w-0');
-    }
+    
+    backArrow[0].classList.remove('w-75');
+
+    backArrow[1].classList.add('w-0');
+    backArrow[1].classList.remove('opacity-100');    
+    
 })
 
 
@@ -441,7 +454,7 @@ backArrow.addEventListener('click', () => {
 
 // 'MAN' Category dropdown toggle:
 
-manDropdown.addEventListener('click', () => {
+manLi.addEventListener('click', () => {
     manDropdown.classList.toggle('border-white');
     manDropdown.classList.toggle('link-hover-effect');
 
@@ -478,7 +491,7 @@ for (let i=0, len=areaOutsideMan.length; i<len; i++) {
 
 // 'WOMAN' Category dropdown toggle:
 
-womanDropdown.addEventListener('click', () => {
+womanLi.addEventListener('click', () => {
     womanDropdown.classList.toggle('border-white');
     womanDropdown.classList.toggle('link-hover-effect');
 
@@ -516,7 +529,7 @@ for (let i=0, len=areaOutsideWoman.length; i<len; i++) {
 
 // 'ACCESSORIES' Category dropdown toggle:
 
-accessoriesDropdown.addEventListener('click', () => {
+accessoriesLi.addEventListener('click', () => {
     accessoriesDropdown.classList.toggle('border-white');
     accessoriesDropdown.classList.toggle('link-hover-effect');
 

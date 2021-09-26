@@ -168,6 +168,7 @@ module.exports = {
       '607': '607px',
       '619': '619px',
       '630': '630px',
+      '631': '631px',
       '636': '636px',
       '640': '640px',
       '650': '650px',
@@ -275,6 +276,17 @@ module.exports = {
       71: '71px',
       72: '72px',
       90: '90px',
+
+      '10vw': '10vw',
+      '20vw': '12vw',
+      '30vw': '13vw',
+      '40vw': '14vw',
+      '50vw': '15vw',
+      '60vw': '16vw',
+      '70vw': '17vw',
+      '80vw': '18vw',
+      '90vw': '19vw',
+      '100vw': '20vw',
     },
 
     letterSpacing: {
@@ -282,6 +294,7 @@ module.exports = {
       subtittle: '0.03em',
       sectiontitle: '0.085em',
       normal: '0',
+      medium: '0.05em',
       wide: '0.1em',
       wider: '0.2em',
     },

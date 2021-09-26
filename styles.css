@@ -105,7 +105,7 @@ button:focus {
 }
 
 ::-moz-selection { background: #b06d1c; color: white; }
-::selection { background: #b06d1c; color: white; }
+::selection { background: black; color: white; }
 
 input[type="button"]::-moz-focus-inner {
   border: 0;
@@ -291,7 +291,8 @@ header h1.menu-active {
   display: inline-block;
 }
 
-#dropdown-mobile li a:after {
+#dropdown-mobile > ul > li a:last-child:after, #dropdown-mobile > ul > .li-man a:after,
+#dropdown-mobile > ul > .li-woman a:after, #dropdown-mobile > ul > .li-accessories a:after {
   display: block;
   content: '';
   border-bottom: solid 1px white;
@@ -301,10 +302,9 @@ header h1.menu-active {
 }
 
 
-#dropdown-mobile li a.link-hover-effect:after {
+#dropdown-mobile li a + a.link-hover-effect:after, #dropdown-mobile li a.link-hover-effect:after {
   border-bottom: 0;
-}
-
+} */
 
 
 
