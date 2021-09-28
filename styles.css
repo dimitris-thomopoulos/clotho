@@ -304,7 +304,7 @@ header h1.menu-active {
 
 #dropdown-mobile li a + a.link-hover-effect:after, #dropdown-mobile li a.link-hover-effect:after {
   border-bottom: 0;
-} */
+}
 
 
 
@@ -317,11 +317,7 @@ header h1.menu-active {
 // SEASON ARRIVALS INTRO:
 
 
-
-
 // Price tags hover effect:
-
-
 
 // Mobile man coat price tag:
 
@@ -483,7 +479,13 @@ header h1.menu-active {
 }
 
 
+#see-more-products {
+  box-shadow: 0 0 12px rgba(0,0,0,0.5);
+}
 
+#see-more-products:hover {
+  box-shadow: none;
+}
 
 
 

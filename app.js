@@ -890,38 +890,30 @@ const products = [...document.querySelectorAll('#products a')];
 const productsImages = [...document.querySelectorAll('#products a img')];
 const productsPrices = [...document.querySelectorAll('.product-price')];
 
+const productsPricesHover = [...document.querySelectorAll('.product-price > div')];
+
 
 for (let ii=0; ii<products.length; ii++) {
     
     products[ii].addEventListener('mouseenter', () => {
         
-        // Box shadow animation
-        
+        productsPricesHover[ii].classList.toggle('opacity-0');
+        productsPricesHover[ii].classList.toggle('opacity-100');
 
-
-
-        // box shadow animation end
-        
-        productsPrices[ii].classList.toggle('bg-product-price');
-        productsPrices[ii].classList.toggle('bg-white');
-        productsPrices[ii].style.transition = ('all 0.2s ease-in-out');
+        productsPricesHover[ii].style.transition = ('all 0.2s ease-in-out');
 
 
         productsImages[ii].classList.toggle('scale-125');
         productsImages[ii].style.transition = ('all 0.2s ease-in-out');
     });
 
+    
     products[ii].addEventListener('mouseleave', () => {
 
-        // Box shadow animation
-            
+        productsPricesHover[ii].classList.toggle('opacity-100');
+        productsPricesHover[ii].classList.toggle('opacity-0');
 
-
-        // box shadow animation end
-
-        productsPrices[ii].classList.toggle('bg-white');
-        productsPrices[ii].classList.toggle('bg-product-price');
-        productsPrices[ii].style.transition = ('all 0.2s ease-in-out');
+        productsPricesHover[ii].style.transition = ('all 0.2s ease-in-out');
 
 
         productsImages[ii].classList.toggle('scale-125');

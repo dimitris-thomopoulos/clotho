@@ -199,9 +199,13 @@ module.exports = {
       '2.72': '2.72%',
       '2.867': '2.867%',
       '3.5': '3.5%',
+      '4/100': '4%',
       '5/100': '5%',
       '5.9': '5.9%',
       '6/100': '6%',
+      '7/100': '7%',
+      '8/100': '8%',
+      '9/100': '9%',
       '10/100': '10%',
       '12/100': '12%',
       '13/100': '13%',
@@ -272,6 +276,7 @@ module.exports = {
       40: '40px',
       47: '47px',
       48: '48px',
+      56: '56px',
       64: '64px',
       71: '71px',
       72: '72px',
@@ -321,6 +326,7 @@ module.exports = {
       DEFAULT: '0 0 40px rgba(0, 0, 0, 0.25);',
       product: '0px 4px 18px 3px rgba(0, 0, 0, 0.27);',
       product_hover: '0px 4px 18px 3px rgba(0, 0, 0, 0.5);',
+      see_more_products: '0 0 12px rgba(0,0,0,0.5);',      
     },
 
     minWidth: {
@@ -709,6 +715,7 @@ module.exports = {
        'white': '#FFFFFF',
        'black': '#000000',
        'grey': '#1F1F1F',
+       'shop-now': '#ffffffb8',
     }),
     
     fontFamily: {
@@ -740,6 +747,8 @@ module.exports = {
         'exotic-highneck': '#A02721',
         'mustard-tshirt': '#896000',
         'pink-dress': '#685053',
+
+        'fall-season': '#ffb485',
       },
       
       opacity: {
@@ -760,14 +769,12 @@ module.exports = {
         'dark-grey': '#1F1918',
         'ivory-dress-text': '#594641',
         'blue-jacket-text': '#00485E',
+        'product-price': '#C2C2C2',
+
         'see-more-products-color': 'rgba(0, 0, 0, 0.05)',
         'active-category-index': '#FFFFFF',
         'inactive-category-index': '#4B4B4B',
       },
-
-      backgroundColor: theme => ({
-        'product-price': 'rgba(196, 196, 196, 0.33);',
-      }),
 
       backgroundImage: theme => ({                  //How To Use: bg-{key}
         'main1': "url('./images/main1.jpg')", 
@@ -786,6 +793,9 @@ module.exports = {
         'clotho-pattern-mobile': "url('./images/clotho-pattern-bg-mobile.png')",     
         'clotho-pattern-desktop': "url('./images/clotho-pattern-bg.png')",     
         'footer-image': "url('./images/footer-bg.jpg')",   
+
+        'product-price': 'linear-gradient(180deg, #000000 0%, #505050 100%);',
+        'product-price-white': 'linear-gradient(180deg, #FFFFFF 100%, #FFFFFF 100%)',
 
         'left-slider-linear': 'linear-gradient(to right, black, transparent);',
         'right-slider-linear': 'linear-gradient(to left, black, transparent);',
@@ -912,12 +922,16 @@ module.exports = {
         '8': '8px',
         '9': '9px',
         '10': '10px',
+        '13': '13px',
         '18': '18px',
         '20': '20px',
+        '22': '22px',
         '25': '25px',
-        '50': '50px',
+        '28': '28px',
         '41': '41px',
+        '50': '50px',
         '51': '51px',
+        '60': '60px',
         '76': '76px',
         '1em': '1em',
         'inherit': 'inherit',
